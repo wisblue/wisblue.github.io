@@ -13,10 +13,10 @@
     
     <item>
       <title>直线法线式的几何证明</title>
-      <link>https://wisblue.github.io/2019/01/chinese-test/</link>
+      <link>https://wisblue.github.io/2019/01/post-math-normal-line-formula-2d/</link>
       <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wisblue.github.io/2019/01/chinese-test/</guid>
+      <guid>https://wisblue.github.io/2019/01/post-math-normal-line-formula-2d/</guid>
       <description>直线法线式的几何证明 法线式 ​ x * cosθ + y * sinθ - d = 0
 几何证明： 在直角坐标系画任意斜线l，从坐标原点O画垂直于l的线段m,垂足为S。 取l上任一点P(x, y)。从坐标(x, 0)引垂直于m的线段n，垂足为Q。从P(x, y)引垂直于n的线段PR，垂足为R。
 原点O到直线l的距离
