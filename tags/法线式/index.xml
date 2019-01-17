@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>法线式 on Hugo tranquilpeak theme</title>
+    <link>https://wisblue.github.io/tags/%E6%B3%95%E7%BA%BF%E5%BC%8F/</link>
+    <description>Recent content in 法线式 on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/tags/%E6%B3%95%E7%BA%BF%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>直线法线式的几何证明</title>
+      <link>https://wisblue.github.io/2019/01/chinese-test/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/chinese-test/</guid>
+      <description>直线法线式的几何证明 法线式 ​ x * cosθ + y * sinθ - d = 0
+几何证明： 在直角坐标系画任意斜线l，从坐标原点O画垂直于l的线段m,垂足为S。 取l上任一点P(x, y)。从坐标(x, 0)引垂直于m的线段n，垂足为Q。从P(x, y)引垂直于n的线段PR，垂足为R。
+原点O到直线l的距离
+​ d = OQ + QS
+OQ = x * cos θ， QS = y * sin θ
+则 x * cos θ + y * sin θ - d = 0
+推广：
+设线段OS与X轴的夹角为ωx = θ， 线段OS与Y轴的夹角为ωy = 90°- θ
+则得 x * cos(ωx) + y * cos(ωy) - d = 0</description>
+    </item>
+    
+  </channel>
+</rss>
