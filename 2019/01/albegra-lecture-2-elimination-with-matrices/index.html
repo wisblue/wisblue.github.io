@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="wisblue">
+<meta name="keywords" content="">
+<meta name="description" content="Linear Equations vs line and pland vs vectors.">
+
+
+<meta property="og:description" content="Linear Equations vs line and pland vs vectors.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Albegra Lecture 2 - Elimination with matrices">
+<meta name="twitter:title" content="Albegra Lecture 2 - Elimination with matrices">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+<meta property="og:site_name" content="我的学习笔记">
+<meta property="og:description" content="Linear Equations vs line and pland vs vectors.">
+<meta name="twitter:description" content="Linear Equations vs line and pland vs vectors.">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-18T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-18T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Math">
+    
+      <meta property="article:section" content="Algebra">
+    
+  
+  
+    
+      <meta property="article:tag" content="Algebra">
+    
+      <meta property="article:tag" content="Math">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@wisblue">
+
+
+  <meta name="twitter:creator" content="@wisblue">
+
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/img/ml/algebra-1-2019-01-18.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/img/ml/algebra-1-2019-01-18.png">
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/head.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/head.png">
+
+
+    <title>Albegra Lecture 2 - Elimination with matrices</title>
+
+    <link rel="icon" href="https://wisblue.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://wisblue.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
+  </div>
+  
+    
+      <a class="header-right-icon "
+         href="https://wisblue.github.io/#about">
+    
+    
+      <i class="fa fa-lg fa-/head.png"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://wisblue.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">wisblue</h4>
+        
+          <h5 class="sidebar-profile-bio">我的学习笔记</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wisblue" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Albegra Lecture 2 - Elimination with matrices
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-18T00:00:00Z">
+        
+  
+  
+  
+  
+    2019年01月18日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/math">Math</a>, 
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/algebra">Algebra</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Linear Equations vs line and pland vs vectors.</p>
+
+<p>I put right there a system of equations that&rsquo;s going to be our example to work with.
+But what are we going to do with it?
+We&rsquo;re going to solve it.</p>
+
+<p>The method we&rsquo;ll use is called elimination.
+And it&rsquo;s the way every software package solves equations. And elimination, well, if it succeeds, it gets the answer.</p>
+
+<p>all the key ideas get expressed as matrix operations, not as words.
+And one of the operations, of course, that we&rsquo;ll meet is how do we multiply matrices and why?
+Okay, so there&rsquo;s a system of equations.
+Three equations and three unknowns.
+And there&rsquo;s the matrix, the three by three matrix &ndash; so this is the system Ax = b. This is our system to solve, Ax
+equal &ndash; and the right-hand side is that vector 2, 12, 2. Okay.
+Now, when I describe elimination &ndash; it gets to be a pain to keep writing the equal signs and the pluses and so on.
+It&rsquo;s that matrix that totally matters.
+Everything is in that matrix.
+But behind it is those equations.
+So what does elimination do?
+What&rsquo;s the first step of elimination? We accept the first equation, it&rsquo;s okay.
+I&rsquo;m going to multiply that equation by the right number, the right multiplier and I&rsquo;m going to subtract it from the
+second equation.
+With what purpose?
+So that will decide what the multiplier should be.
+Our purpose is to knock out the x part of equation two.
+So our purpose is to eliminate x.
+So what do I multiply &ndash; and again, I&rsquo;ll do it with this matrix, because I can do it short.
+What&rsquo;s the multiplier here?
+What do I multiply &ndash; equation one and subtract.
+Notice I&rsquo;m saying that word subtract.
+I&rsquo;d like to stick to that convention.
+I&rsquo;ll do a subtraction. First of all this is the key number that I&rsquo;m starting with.
+And that&rsquo;s called the pivot.
+I&rsquo;ll put a box around it and write its name down.
+That&rsquo;s the first pivot.
+The first pivot.
+Okay. So I&rsquo;m going to use &ndash; that&rsquo;s sort of like the key number in that equation.
+And now what&rsquo;s the multiplier?
+So I&rsquo;m going to &ndash; my first row won&rsquo;t change, that&rsquo;s the pivot row.
+But I&rsquo;m going to use it &ndash; and now, finally, let me ask you what the multiplier is.
+Yes? 3 times that first equation will knock out that 3. Okay.
+So what will it leave?
+So the multiplier is 3. 3 times that will make that 0. That was our purpose. 3 2s away from the 8 will leave a 2 and
+three 1s away from 1 will leave a minus 2. And this guy didn&rsquo;t change. Now the next step &ndash; this is forward
+elimination and that
+Okay. step&rsquo;s completed.
+Oh, well, you could say wait a minute, what about the right
+hand side? Shall I carry &ndash; the right-hand side gets carried along.
+Actually MatLab finishes up with the left side before &ndash; and then just goes back to do the right side.
+Maybe I&rsquo;ll be MatLab for a moment and do that.
+Okay. I&rsquo;m leaving a room for a column of b, the right-hand side.
+But I&rsquo;ll fill it in later.
+Okay.
+Now the next step of elimination is what?
+Well, strictly speaking&hellip; this position that I cleaned up was like the 2, 1 position, row 2, column 1. So I got a 0 in
+the 2, 1 position.
+I&rsquo;ll use 2,1 as the index of that step.
+The next step should be to finish the column and get a 0 in that position.
+So the next step is really the 3,1 step, row three, column one.
+But of course, I already have 0. Okay. So the multiplier is 0. I take 0 of this equation away from this one and I&rsquo;m all
+set.
+So I won&rsquo;t repeat that, but there was a step there which, MatLab would have to look &ndash; it would look at this number
+and, do that step, unless you told it in advance that it was 0. Okay. Now what?
+Now we can see the second pivot, which is what?
+The second pivot &ndash; see, we&rsquo;ve eliminated &ndash; x is now gone from this equation, right?
+We&rsquo;re down to two equations in y and z.
+And so now I just do it again.
+Like, everything&rsquo;s very cursive at this &ndash; this is like &ndash; such a basic algorithm and you&rsquo;ve seen it, but carry me
+through one last step. So this is still the first pivot.
+Now the second pivot is this guy, who has appeared there.
+And what&rsquo;s the multiplier, the appropriate multiplier now? And what&rsquo;s my purpose?
+Is it to wipe out the 3, 2 position, right? This was the 2, 1 step.
+And now I&rsquo;m going to take the 3, 2 step.
+So this all stays the same, 1 2 1, 0 2 -1 and the pivots are there.
+Now I&rsquo;m using this pivot, so what&rsquo;s the multiplier? this row, gets subtracted from this row and makes that a 0. So
+it&rsquo;s 0, 0 and is it a 5? Yeah, I guess it&rsquo;s a 5, is that right?
+Because I have a one there and I&rsquo;m subtracting twice of twice this, so I think it&rsquo;s a 5 there.
+There&rsquo;s the third pivot.
+So let me put a box around all three pivots. Is there a &ndash; oh, did I just invent a negative one?
+I&rsquo;m sorry that the tape can&rsquo;t, correct that as easily as I can.
+Okay. Thank you very much. You get an A in the course now. Is that correct? Is it correct now?
+Okay. So the three pivots are there &ndash; I know right away a lot about this matrix. This elimination step from A &ndash; this
+matrix I&rsquo;m going to call U. U for upper triangular.
+So the whole purpose of elimination was to get from A to U.
+And, literally, that&rsquo;s the most common calculation in scientific computing. And people think of how could I do that
+faster?
+Because it&rsquo;s a major, major thing.
+But we&rsquo;re doing it the straightforward way.
+We found three pivots, and by the way, I didn&rsquo;t say this, pivots can&rsquo;t be 0. I don&rsquo;t accept 0 as a pivot.
+And I didn&rsquo;t get 0. So this matrix is great.
+It gave me three pivots, I didn&rsquo;t have to do anything special, I just followed the rules and, and the pivots are 1, 2
+and 5. By the way, just because I always anticipate stuff from a later day, if I wanted to know the determinant of
+this matrix &ndash; which I never do want to know, but I would just multiply the pivots.
+The determinant is 10. So even things like the determinant are here.
+Okay.
+Now &ndash; oh, let me talk about failure for a moment, and then &ndash; and then come back to success.
+How could this have failed?
+How could &ndash; by fail, I mean to come up with three pivots. I mean, there are a couple of points.
+I would have already been in trouble if this very first number here was 0.
+If it was a 0 there &ndash; suppose that had been a 0, there were no Xs in that equation &ndash; first equation. Does that
+mean I can&rsquo;t solve the problem?
+Does that mean I quit?
+No.
+What do I do? I switch rows.
+I exchange rows.
+So in case of a 0, I will not say 0 pivot.
+I will never be heard to utter those words, 0 pivot.
+But if there&rsquo;s a 0 in the pivot position, maybe I can say that, I would try to exchange for a lower equation and get a
+proper pivot up there.
+Okay.
+Now, for example, this second pivot came out two.
+Could it have come out 0? What &ndash; actually, if I change that 8 a little bit, I would have got a little trouble.
+What should I change that 8 to so that I run into trouble?
+A 6. If that had been a 6, then this would have been 0 and I couldn&rsquo;t have used that as the pivot.
+But I could have exchanged again.
+In this case.
+In this case, because when can I get out of trouble?
+I can get out of trouble if there&rsquo;s a non-0 below this troublesome 0. And there is here.
+So I would be okay in this case.
+If this was a 6, I would survive by a row
+exchange. Now &ndash; of course, it might have happened that I couldn&rsquo;t do the row, that &ndash; that there was 0s below it,
+but here there wasn&rsquo;t.
+Now, I could also have got in trouble if this number 1 was a little different.
+See, that 1 became a 5, I guess, by the end.
+So can you see what number there would have got me trouble that I really couldn&rsquo;t get out of?
+Trouble that I couldn&rsquo;t get out of would mean if 0 is in the pivot position and I&rsquo;ve got no place to exchange.
+So there must be some number which if I had had here it would have meant failure.
+Negative 4, good.
+If it was a negative 4 here &ndash; if it happened to be a negative 4, I&rsquo;ll temporarily put it up here. If this had been a
+negative 4 z, then I would have gone through the same steps.
+This would have been a minus 4, it still would have been a
+minus 4. But at the last minute it would have become 0. And there wouldn&rsquo;t have been a third pivot.
+The matrix would have not been invertible.
+Well, of course, the inverse of a matrix is coming next week, but, you&rsquo;ve heard these words
+before. So, that&rsquo;s how we identify failure.
+There&rsquo;s temporary failure when we can do a row exchange &ndash; and get out of it, or there&rsquo;s complete failure when we
+get a 0 and &ndash; and there&rsquo;s nothing below that we can use.
+Okay. Let&rsquo;s stay with &ndash; back to success now.
+In fact, I guess the next topic is back substitution.
+So what&rsquo;s back substitution?
+Well, now I&rsquo;d better bring the right-hand side in.
+So what would MatLab do and what should we do? Let me bring in the right-hand side as an extra column.
+So there comes B.
+So it&rsquo;s 2, 12, I would call this the augmented matrix.
+&ldquo;Augment&rdquo; means you&rsquo;ve tacked something on.
+I&rsquo;ve tacked on this extra column.
+Because, when I&rsquo;m working with equations, I do the same thing to both sides.
+So, at this step, I subtracted 2 of the first equation away from the second equation so that this augmented &ndash; I
+even brought some colored chalk, but I don&rsquo;t know if it
+shows up. So this is like the augmented &ndash; no!
+Damn, circled the wrong thing.
+Okay.
+Here is b.
+Okay, that&rsquo;s the extra column.
+Okay. So what happened to that extra column, the right-hand side of the equations, when I did the first step?
+So that was 3 of this away from this, so it took &ndash; the 2 stayed the same, but three 2s got taken away from 12,
+leaving 6, and that 2 stayed the same.
+So this is how it&rsquo;s looking halfway along.
+And let me just carry to the end.
+The 2 and the 6 stay the same, but &ndash; what do I have here?
+Oh, gosh.
+Help me out, now.
+What &ndash; so now I&rsquo;m &ndash; This is still like forward elimination.
+I got to this point, which I think is right, and now what did I do at this step?
+I multiplied that pivot by 2 or that whole equation by 2 and subtracted from that, so I think I take two 6s, which is
+12, away from the 2. Do you think minus 10 is my final right-hand side &ndash; the right-hand side that goes with U, and
+let me call that once and forever the vector c.
+So c is what happens to b, and U is what happens to A.
+Okay.
+There you&rsquo;ve seen elimination clean.
+Okay.
+Oh, what&rsquo;s back substitution? So what are my final equations, then? Can I copy these equations? x+2y+z=2 is still
+there and 2y-2z=6 is there, and 5z=-10. Okay. Those are the equations that these numbers are telling me about.
+Those are the equations U x equals c.
+Okay, how do I solve them? What one do I solve for first? z.
+I see immediately that the correct value of z is negative And what do I do next?
+I go back upwards.
+I now know z here. So, if z is negative 2, that&rsquo;s 4 there, is that right?
+And so 2 y plus a 4 is 6, maybe y is 1. Going &ndash; this is back substitution.
+We&rsquo;re doing it on the fly because it&rsquo;s so easy.
+And then x is &ndash; so x &ndash; 2y is 2 minus 2, maybe x is 2? So you see what back substitution is.
+It&rsquo;s the simple step solving the equations in reverse order because the system is triangular.
+Okay. Good.
+So that&rsquo;s elimination and back substitution, and I kept the right-hand side along.
+Okay, now what do I &ndash; that, like, is first piece of the
+lecture. What&rsquo;s the second piece?
+Matrices are going to get in. So I wrote stuff with x, y-s and z-s in there, then I really, got the right shorthand, just
+writing the matrix entries, and now I want to write the operations that I did in matrices, right?
+I&rsquo;ve carried the matrices along, but I haven&rsquo;t said the operation those elimination steps, I now want to express as
+matrices.
+Okay.
+Here they come. So now this is elimination matrices.
+Okay. Let me take that first step, which took me from 1 2 1 3 8 1 0 4 1. I want to operate on that &ndash; I want to do
+elimination on that.
+Okay. Okay, now I&rsquo;m remembering a point I want to single out as especially important. Let me move the board up
+for that.
+Because when we do matrix operations, we&rsquo;ve got to, like, be able to see the big picture.
+Okay. Last time, I spoke about the big picture of &ndash; when I multiply a matrix by a right-hand side.
+If I have some matrix there and I multiply it by 3 4 5, let&rsquo;s say &ndash; so here&rsquo;s a matrix &ndash; what did I say &ndash; well, I guess
+I only said it on the videotape, but &ndash; do you remember how I look at that matrix multiplication?
+The result of multiplying a matrix by some vector is a combination of the columns of the matrix.
+It&rsquo;s 3 times the first column.
+It&rsquo;s 3 times column one plus 4 times column two plus 5 times column three.
+Okay.
+I&rsquo;m going to come back to that multiple times.
+What I wanted to do now was to emphasize the parallel thing with rows.
+Why?
+Because all our operations here for this two weeks of the course are row operations. So this isn&rsquo;t what I need for
+row operations. Let me do a row operation.
+Suppose I have my matrix again and suppose I multiply on the left by some &ndash; let&rsquo;s say 1 2 7. Again, I&rsquo;m just, like,
+saying what the result is.
+And then we&rsquo;ll say how matrix multiplication works and we&rsquo;ll see that it&rsquo;s true.
+Okay. But maybe already I&rsquo;m making &ndash; I&rsquo;m sort of bringing up &ndash; the central idea of linear algebra is how these
+matrices work by rows as well as by columns.
+Okay. How does it work by rows?
+What &ndash; so that&rsquo;s a row vector. I could say that&rsquo;s a one by three matrix, a row vector multiplying a three by three
+matrix. What&rsquo;s the output?
+What&rsquo;s the product of a row times a matrix?
+And &ndash; okay, it&rsquo;s a row.
+A row &ndash; a column &ndash; I&rsquo;m sorry.
+A matrix times a column is a column.
+So matrix times a &ndash; yeah. Matrix times a column is a column.
+And we know what column it is.
+Over here, I&rsquo;m doing a row times a matrix. And what&rsquo;s the answer?
+It&rsquo;s one of that first row, so it&rsquo;s 1 times &ndash; 1 times row one, plus 2 times row two plus 7 times row three.
+When &ndash; as we do matrix multiplication, keep your eye on what it&rsquo;s doing with whole vectors.
+And what it&rsquo;s doing &ndash; what it&rsquo;s doing in this case is it&rsquo;s combining the rows.
+And we have a combination, a linear combination of the rows.
+Okay, I want to use that.
+Okay, so my question is what&rsquo;s the matrix that does this first step, that takes &ndash; subtracts 3 of equation one from
+equation two?
+That&rsquo;s what I want to do.
+So this is going to be a matrix that&rsquo;s going to subtract 3 times row one from row two, and leaves the other rows the
+same. Just in &ndash; I mean, the answer is going to be that.
+So whatever matrix this is &ndash; and you&rsquo;re going to, like, tell me what matrix will do it, it&rsquo;s the matrix that leaves the
+first row unchanged, leaves the last row unchanged, but takes 3 of these away from this so it puts a 0 there, a 2
+there and a minus 2. Good.
+What matrix will do it?
+It&rsquo;s these.
+It should be a pretty simple matrix, because we&rsquo;re doing a very simple step.
+We&rsquo;re just doing this step that changes row two.
+So actually, row one is not changing.
+So tell me how the matrix should begin.
+One &ndash; the first row of the matrix will be 1 0 0, because that&rsquo;s just the right thing that takes one of that row and
+none of the other rows, and that&rsquo;s what we want.
+What&rsquo;s the last row of the matrix?
+0 0 1, because that takes one of the third row and none of the other rows, that&rsquo;s great.
+Okay.
+Now, suppose I didn&rsquo;t want to do anything at all.
+Suppose my row &ndash; well, I guess maybe I had a case here when I already had a 0 and, didn&rsquo;t have to do anything.
+What matrix does nothing, like, just leaves you where you were?
+If I put in &ndash; if I put in 0 1 0, that would be &ndash; that would be &ndash; that&rsquo;s the matrix &ndash; what&rsquo;s the name of that matrix?
+The identity matrix, right.
+So it does absolutely nothing.
+It just multiplies everything and leaves it where it is.
+It&rsquo;s like a one, like the number one, for matrices.
+But that&rsquo;s not what we want, because we want to change this row to &ndash; so what&rsquo;s the correct &ndash; what should I put in
+here now to do it right?
+I want to get &ndash; what do I want?
+What I &ndash; I&rsquo;m after &ndash; I want 3 of row one to get subtracted
+off. So what&rsquo;s the right matrix, finish that matrix for me.
+Negative 3 goes here?
+And what goes here?
+That 1. And what goes here?
+The 0. That&rsquo;s the good matrix.
+That&rsquo;s the matrix that takes minus 3 of row one plus the row two and gives the new row 2. Should we just, like,
+check some particular
+entry? How do I check a particular entry of a matrix in matrix multiplication?
+Like, suppose I wanted to check the entry here that&rsquo;s in row two, column three.
+So where does the entry in row two, column three come from?
+I would look at row two of this guy and column three of this one to get that number.
+That number comes from the second row and the third column and I just take this dot product minus 3 &ndash; I&rsquo;m
+multiplying &ndash; minus 3 plus 1 and 0 gives the minus 2. Yeah.
+It works. So we got various ways to multiply matrices now.
+We&rsquo;re sort of, like &ndash; informally.
+We&rsquo;ve got by columns, we&rsquo;ve got &ndash; well, we will have by columns, by rows, by each entry at a
+time. But it&rsquo;s good to see that matrix multiplication when one of the matrices is so simple.
+So this guy is our elementary matrix. Let&rsquo;s call it E for elementary or elimination.
+And let me put the indexes 2 1, because it&rsquo;s the matrix that we needed to fix the 2 1 position. It&rsquo;s the matrix that
+we needed to get this 2 1 position to be Okay.
+Good enough.
+So what do I do next?
+I need another matrix, right?
+I need to &ndash; there&rsquo;s another step here.
+And I want to express the whole elimination process in matrix language.
+So tell me what &ndash; so next step, step two, which was what?
+Subtract &ndash; what was &ndash; what was the actual step that we did?
+I think I subtracted &ndash; do you remember?
+I had a 2 in the pivot and a 4 below it, so I subtracted two times &ndash; times row two from row three.
+From row three.
+Tell me the matrix that will do that.
+And tell me its name.
+Okay, it&rsquo;s going to be E, for elementary or elimination matrix and what&rsquo;s the index number that I used to tell me
+what E &ndash; 3, 2, right?
+Because it&rsquo;s fixing this 3 2 position.
+And what&rsquo;s the matrix, now?
+Okay, you remember &ndash; so E 3 2 is supposed to multiply my guy that I have and it&rsquo;s supposed to produce the right
+result, which was &ndash; it leaves &ndash; it&rsquo;s supposed to leave the first row, it&rsquo;s supposed to leave the second row and it&rsquo;s
+supposed to straighten out that third row to this.
+And what&rsquo;s the matrix that does that?
+1 0 0, right?
+Because we don&rsquo;t change the first row and the next row we don&rsquo;t change either, and the last row is the one we do
+change.
+And what do I do?
+Let&rsquo;s see, I subtract two times &ndash; so what&rsquo;s this row?
+What&rsquo;s this here? 0, right, because the first row&rsquo;s not involved. It&rsquo;s just in the 3 2 position, isn&rsquo;t it?
+This the key number is this minus the multiplier that goes &ndash; sitting there in that 3 2 position. Is it a minus 2 to
+subtract 2 and then this is a 1 so that &ndash; the overall effect is to take minus 2 of this row plus 1 of
+that. Okay.
+So, I&rsquo;ve now given you the pieces, the elimination matrices, the elementary matrices that take each step.
+So now what?
+Now the next point in the lecture is to put those steps together into a matrix that does it all and see how it all
+happens.
+So now I&rsquo;m going to express the whole &ndash; everything we did today so far on A was to start with A, we multiplied it
+by E 2 1, that was the first step &ndash; and then we multiplied that result by E 3 2 and that led us to this thing and what
+was that matrix?
+U.
+You see why I like matrix notation, because there in, like, little space &ndash; a few bits when its compressed on the web
+&ndash; is everything &ndash; is this whole lecture.
+Okay. Now there &ndash; there are important facts about matrix multiplication.
+And we&rsquo;re close to maybe the most important.
+And that is this.
+Suppose I ask you this question.
+Suppose I start with a matrix A and I want to end with a matrix U and I want to say what matrix does the whole
+job?
+What matrix takes me from A to U, using the letters I&rsquo;ve got? And the answer is simple.
+I&rsquo;m not asking this as &ndash; but it&rsquo;s highly important. How would I create the matrix that does the whole job at once,
+that does all of elimination in one shot?
+It would be &ndash; I would just put these together, right?
+In other words, this is the thing I&rsquo;m struggling to say.
+I can move those parentheses.
+If I keep the matrices in order &ndash; I can&rsquo;t mess around with the order of the matrices, but I can change the order that
+I do the multiplications.
+I can multiply these two first &ndash; in other words, you see what those parentheses are doing?
+It&rsquo;s saying &ndash; multiply the Es first and that gives you the matrix that does everything at once.
+Okay. So this fact, that this is automatically the same as this &ndash; for every matrix multiplication, which I&rsquo;m conscious
+of still not telling you in every detail, but, like, you&rsquo;re seeing how it works &ndash; and this is highly important &ndash; and
+maybe tell me the long word that describes this law for matrices, that you can move the parentheses?
+It&rsquo;s called the associative law.
+I think you can now forget that. But don&rsquo;t forget the law.
+I mean, like, forget the word associative.
+I don&rsquo;t know.
+But don&rsquo;t forget the law.
+Because actually, we&rsquo;ll see so many steps in linear algebra, so many proofs, even, of main fact come from just
+moving the parentheses. And it&rsquo;s not that easy to prove that this is correct, you have to go into the gory details of
+matrix multiplication, do it both ways and see that you come out the same.
+Maybe I&rsquo;ll leave the author to do that.
+Okay.
+So there we go. So there&rsquo;s a single matrix, I could call it E &ndash; while we&rsquo;re talking about these matrices, tell me one
+other &ndash; there&rsquo;s another type of elementary matrix, and we already said why we might need it.
+We didn&rsquo;t need it in this case.
+But it&rsquo;s the matrix that exchanges two rows.
+It&rsquo;s called a permutation matrix.
+Can you just, like, tell me what that would So I&rsquo;m just &ndash; like, this is a slight digression and be? we&rsquo;ll &ndash; yes, so let
+me get some &ndash; let me figure out where I&rsquo;m going to put a permutation matrix.
+You&rsquo;ll see I&rsquo;m always squeezing stuff in.
+So permutation.
+Or, in fact this one you&rsquo;ll, like, exchange rows &ndash; shall I exchange rows one and two, just to make life easy?
+So if I had my matrix &ndash; no, let &ndash; let me just do two by two. |a b; c d|.
+Suppose I want to find the matrix that exchanges those rows.
+What is it?
+So the matrix that exchanges those rows &ndash; the row I want is c d and it&rsquo;s there.
+So I better take one of it.
+And the row I want here is up top, so I&rsquo;ll take one of that.
+So actually, I&rsquo;m just &ndash; the easy way &ndash; this is my matrix that I&rsquo;ll call P, for permutation.
+It&rsquo;s the matrix &ndash; actually, the easy way to find it is just do the thing to the identity matrix. Exchange the rows of the
+identity matrix and then that&rsquo;s the matrix that will do row exchanges for you. Suppose I wanted to exchange
+columns instead.
+Columns have hardly got into today&rsquo;s lecture, but they certainly are going to be around.
+How could I &ndash; if I started with this matrix |a b; c d| then I wouldn&rsquo;t &ndash; I&rsquo;m not even going to write this down, I&rsquo;m just
+going to ask you, because in elimination, we&rsquo;re doing rows.
+But suppose we wanted to exchange the columns of a matrix.
+How would I do that? What matrix multiplication would do that job?
+Actually, why not?
+I&rsquo;ll write it down.
+So this is &ndash; I&rsquo;ll write it under here and then hide it again.
+Okay.
+Suppose I had my matrix |a b; c d| and I want to get to a c over here and b d here.
+What matrix does that job?
+Can I multiply &ndash; can I cook up some matrix that produces that answer? You can see from where I put my hand I
+was really asking can I put a matrix here on the left that will exchange columns?
+And the answer is no. I&rsquo;m just bringing out again this point that when I multiply on the left, I&rsquo;m doing row
+operations.
+So if I want to do a column operation, where do I put that permutation matrix? On the right.
+If I put it here, where I just barely left room for it &ndash; so I&rsquo;ll exchange the two columns of the identity.
+Then it comes out right, because now I&rsquo;m multiplying a column at a time. This is the first column and says take
+one &ndash; take none of that column, one of this one and then you
+got it. Over here, take one of this one, none of this one and you&rsquo;ve got a c.
+So, in short, to do column operations, the matrix multiplies on the right.
+To do row operations, it multiplies on the left.
+Okay, okay, and it&rsquo;s row operations that we&rsquo;re really
+doing. Okay.
+And of course, I mentioned in passing, but I better say it very clearly that you can&rsquo;t exchange the orders of
+matrices.
+And that&rsquo;s just the point I was making again here.
+A times B is not the same as B times A.
+You have to keep these matrices in their Gauss given order here, right? But you can move the parentheses, so
+that, in other words, the commutative law, which would allow you to take it in the other order is false.
+So we have to keep it in that order.
+Okay. So what next?
+I could do this multiplication.
+I could do E 32. So let me come back to see what that was.
+Here was E 2 1. And here is E 3 2. And if I multiply those two matrices together &ndash; E 3 2 and then E 2 1, I&rsquo;ll get a
+single matrix that does elimination.
+I don&rsquo;t want to do it that &ndash; if I do that multiplication &ndash; there &ndash; there&rsquo;s a better way to do this.
+And so in this last few minutes of today&rsquo;s lecture, can I anticipate that better way?
+The better way is to think not how do I get from A to U, but how do I get from U back to A?
+So reversing steps is going to come in.
+Inverse &ndash; I&rsquo;ll use the word inverse here.
+Okay.
+So let me make the first step at what&rsquo;s the inverse matrix?
+All the matrices you&rsquo;ve seen on this board have inverses. I didn&rsquo;t write any bad matrices down. We spoke about
+possible failure, and for a moment, we put in a matrix that would fail.
+But right now, all these matrices are good, they&rsquo;re all invertible.
+And let&rsquo;s take the inverse &ndash; well, let me say first what does the inverse mean and find it?
+Okay. So we&rsquo;re getting a little leg up on inverses.
+Okay, so this is the final moments of today. Sorry, he&rsquo;s still there.
+Okay.
+Inverses. Okay, and I&rsquo;m just going to take one example and then we&rsquo;re done.
+The example I&rsquo;ll take will be that E. So my matrix is 1 0 0 minus 3 1 0 0 0 1. And I want to find the matrix that
+undoes that step.
+So what was that step?
+The step was subtract 3 times row one from row two.
+So what matrix will get me back?
+What matrix will bring back &ndash; you know, if I started with a 2 12 2 and I changed it to a 2 6 2 because of this guy, I
+want to get back to the 2 12 I want to find the matrix which &ndash; which undoes elimination, the matrix which multiplies
+this to give the identity.
+And you can tell me what I should do in words first, and then we&rsquo;ll write down the matrix that does it.
+If this step subtracted 3 times row 1 from row 2, what&rsquo;s the inverse step?
+I add 3 times row one to row two, right?
+I add it back.
+The &ndash; what I subtracted away, I add back.
+So the inverse matrix in this case is &ndash; I now want to add 3 times row one to row two, so I won&rsquo;t change row one, I
+won&rsquo;t change row three and I&rsquo;ll add 3 times row one to row two.
+That&rsquo;s a case where the inverse is clear.
+It&rsquo;s clear in words what to do, because what this did was simple to express.
+It just changed row two by subtracting 3 of row one.
+So to invert it, I go that way.
+And if you &ndash; if we do that calculation, 3 times this row plus 1 times this row, comes out the right row of the identity.
+Okay, so inverses are an &ndash; so if this matrix was E and this matrix is I for identity, then what&rsquo;s the notation for this
+guy?
+E to the minus one.
+E inverse.
+Okay. Let&rsquo;s stop there for today.
+That&rsquo;s a little jump on what&rsquo;s coming on Monday.
+So, see you Monday.</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/algebra/">Algebra</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/math/">Math</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/" data-tooltip="Albegra Lecture 1 - Geometry of Linear Equations">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/machine-learning-in-three-months/" data-tooltip="Machine Learning in Three Months">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/" data-tooltip="Albegra Lecture 1 - Geometry of Linear Equations">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/machine-learning-in-three-months/" data-tooltip="Machine Learning in Three Months">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Falbegra-lecture-2-elimination-with-matrices%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Falbegra-lecture-2-elimination-with-matrices%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Falbegra-lecture-2-elimination-with-matrices%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+    
+    <h4 id="about-card-name">wisblue</h4>
+    
+      <div id="about-card-bio">我的学习笔记</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        wisblue@gmail.com
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/">
+                <h3 class="media-heading">Albegra Lecture 1 - Geometry of Linear Equations</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Linear Equations vs line and pland vs vectors.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/">
+                <h3 class="media-heading">Albegra Lecture 2 - Elimination with matrices</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Linear Equations vs line and pland vs vectors.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/machine-learning-in-three-months/">
+                <h3 class="media-heading">Machine Learning in Three Months</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>steps and resources to learning machine learning in 3 months. According to the youtube video by Siraj Raval.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/">
+                <h3 class="media-heading">重读《意识的宇宙》</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>重新学习《意识的宇宙》，了解神经元工作方式。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/">
+                <h3 class="media-heading">大道至简的“贝叶斯定理”</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文试图给出贝叶斯定理的直观理解和部分相关应用场景。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+                <h3 class="media-heading">独立事件</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文试图浅显易懂地阐述独立事件的基本概念。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/">
+                <h3 class="media-heading">直线法线式方程的几何证明</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>直线法线式方程百度百科上的公式推导过于繁琐，不够直观。
+这里给出法线式 x * cosθ + y * sinθ - d = 0 的几何证明。并推广到n维超平面。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E8%AE%A1%E7%AE%97%CF%80%E7%9A%84%E5%9C%9F%E5%8A%9E%E6%B3%95/">
+                <h3 class="media-heading">计算π的“土办法”</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文以计算机方法计算π值为例，作为总结计算思维方法的尝试。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         8 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://wisblue.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://wisblue.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/albegra-lecture-2-elimination-with-matrices\/';
+          
+            this.page.identifier = '\/2019\/01\/albegra-lecture-2-elimination-with-matrices\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

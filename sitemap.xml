@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/2019/01/machine-learning-in-three-months/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
   </url>
@@ -33,12 +43,25 @@
   </url>
   
   <url>
+    <loc>https://wisblue.github.io/categories/algebra/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/tags/algebra/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wisblue.github.io/categories/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,13 +78,25 @@
   </url>
   
   <url>
+    <loc>https://wisblue.github.io/categories/machine-learning/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/tags/machine-learning/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/categories/machine-learning/</loc>
+    <loc>https://wisblue.github.io/categories/math/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/tags/math/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -79,13 +114,13 @@
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <loc>https://wisblue.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <loc>https://wisblue.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -139,13 +174,13 @@
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/tags/%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4/</loc>
+    <loc>https://wisblue.github.io/categories/%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4/</loc>
     <lastmod>2019-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/categories/%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4/</loc>
+    <loc>https://wisblue.github.io/tags/%E8%AE%A1%E7%AE%97%E6%80%9D%E7%BB%B4/</loc>
     <lastmod>2019-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

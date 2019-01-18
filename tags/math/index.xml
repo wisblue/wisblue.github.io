@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on 我的学习笔记</title>
+    <link>https://wisblue.github.io/tags/math/</link>
+    <description>Recent content in Math on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Albegra Lecture 1 - Geometry of Linear Equations</title>
+      <link>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</guid>
+      <description>&lt;p&gt;Linear Equations vs line and pland vs vectors.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Albegra Lecture 2 - Elimination with matrices</title>
+      <link>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</guid>
+      <description>&lt;p&gt;Linear Equations vs line and pland vs vectors.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
