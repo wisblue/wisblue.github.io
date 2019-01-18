@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>重读《意识的宇宙》</title>
+      <link>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</guid>
+      <description>&lt;p&gt;重新学习《意识的宇宙》，了解神经元工作方式。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>大道至简的“贝叶斯定理”</title>
@@ -46,15 +55,6 @@
       
       <guid>https://wisblue.github.io/2019/01/%E8%AE%A1%E7%AE%97%CF%80%E7%9A%84%E5%9C%9F%E5%8A%9E%E6%B3%95/</guid>
       <description>&lt;p&gt;本文以计算机方法计算π值为例，作为总结计算思维方法的尝试。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>重读《意识的宇宙》</title>
-      <link>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</link>
-      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</guid>
-      <description>&lt;p&gt;重新学习《意识的宇宙》，了解神经元工作方式。&lt;/p&gt;</description>
     </item>
     
   </channel>
