@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</loc>
+    <lastmod>2019-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/archives/</loc>
     <priority>0</priority>
   </url>
@@ -40,6 +45,24 @@
   
   <url>
     <loc>https://wisblue.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2019-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2019-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/categories/%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/</loc>
+    <lastmod>2019-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,6 +92,12 @@
   
   <url>
     <loc>https://wisblue.github.io/tags/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2019-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/tags/%E7%A5%9E%E7%BB%8F%E5%85%83/</loc>
     <lastmod>2019-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
