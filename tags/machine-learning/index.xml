@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on 我的学习笔记</title>
+    <link>https://wisblue.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Machine Learning in Three Months</title>
+      <link>https://wisblue.github.io/2019/01/machine-learning-in-three-months/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/machine-learning-in-three-months/</guid>
+      <description>&lt;p&gt;steps and resources to learning machine learning in 3 months. According to the video by Siraj Raval, at &lt;a href=&#34;https://www.youtube.com/watch?v=Cr6VqTRO1v0&#34;&gt;https://www.youtube.com/watch?v=Cr6VqTRO1v0&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
