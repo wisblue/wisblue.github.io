@@ -271,21 +271,24 @@
 
 <h5 id="推广">推广：</h5>
 
-<p>设线段OS与X轴的夹角为ω~x~ = θ， 线段OS与Y轴的夹角为ω~y~ = 90°- θ</p>
+<p>设线段OS与X轴的夹角为
+    $$ω_x = θ$$
+线段OS与Y轴的夹角为
+    $$ω_y = 90°- θ$$</p>
 
-<p>则得 x * cos(ω~x~) + y * cos(ω~y~)  - d = 0</p>
+<p>则得$$ x * cos(ω_x) + y * cos(ω_y)  - d = 0$$</p>
 
 <p>写成行列式：</p>
 
-<p>​   [ cos(ω~x~) cos(ω~y~)]  * [x y]T - d = 0 ( T是转置的意思)</p>
+<p>​   <div>$$\begin{vmatrix} cos(ω_x) &amp; cos(ω_y)\end{vmatrix}  * \begin{vmatrix}x \\\ y\end{vmatrix}  - d = 0$$ </div></p>
 
 <p>三维平面的法线式则有：</p>
 
-<p>​   [ cos(ω~x~) cos(ω~y~) cos(ω~z~)]  * [x y z]T - d = 0</p>
+<p>​   <div>$$\begin{vmatrix} cos(ω_x) &amp; cos(ω_y) &amp; cos(ω_z)\end{vmatrix}  * \begin{vmatrix}x \\\ y \\\ z \end{vmatrix}  - d = 0$$ </div></p>
 
 <p>更高维超平面可以简写为</p>
 
-<p>​   ω · X - d = 0</p>
+<p>​   $$\vec{ω} ·\vec{X} - d = 0$$</p>
 
 <p>可以描述成：</p>
 
@@ -297,19 +300,21 @@
 
 <p>三维情况下空间任一点到原点的距离为</p>
 
-<p>d = sqrt(x^2^ + y^2^+z^2^)</p>
+<p>$$d = \sqrt{x^2 + y^2+z^2}$$</p>
 
-<p>得到x^2^ + y^2^ + z^2^ = d^2^</p>
+<p>得到$$x^2 + y^2 + z^2 = d^2$$</p>
 
 <p>两边同除以d</p>
 
-<p>x* x/d + y * y/d + z *z/d = d</p>
+<p>$$x \frac {x}{d} + y \frac {y}{d} + z \frac{z}{d} = d$$</p>
 
-<p>x * cos ω~x~ + y * cos ω~y~ + z * cos ω~z~ - d = 0</p>
+<p>$$x * cos ω_x+ y * cos ω_y + z * cos ω_z - d = 0$$</p>
 
-<p>设X = { x~1~, x~2~…x~n~}为超平面各轴坐标的转置。 ω = {cos ω~1~, cos ω ~2~&hellip;cos ω~n~}为法线与各轴夹角的cos值：</p>
+<p>设$$X = { x_1, x_2…x_n}$$为超平面各轴坐标。
+$$ω = {cos ω_1, cos ω_2&hellip;cos ω_n}$$为法线与各轴夹角的cos值, 于是上式可以写成：</p>
 
-<p>ω · X - d = 0</p>
+<p>$$\vec{ω} · \vec{X} - d = 0$$
+(完)</p>
               
             </div>
           </div>
@@ -405,12 +410,8 @@
             
           </div>
         </article>
-        <footer id="footer" class="main-content-wrap">
-  <span class="copyrights">
-    &copy; 2019 wisblue. All Rights Reserved
-  </span>
-</footer>
-
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
         <div class="post-actions-wrap">
@@ -664,7 +665,10 @@
 
 
     
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
 
