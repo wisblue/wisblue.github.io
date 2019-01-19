@@ -8,42 +8,26 @@
 <meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="wisblue">
 <meta name="keywords" content="">
-<meta name="description" content="
-Inverse of  $ AB,  A^T $
+<meta name="description" content="Column space of A: solving Ax = b
 
-Product of elimation matrices
-
-
-A = LU ( no row exchanges)">
+Null space of A">
 
 
-<meta property="og:description" content="
-Inverse of  $ AB,  A^T $
+<meta property="og:description" content="Column space of A: solving Ax = b
 
-Product of elimation matrices
-
-
-A = LU ( no row exchanges)">
+Null space of A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linear Algebra Lecture 4: Factorization into A = LU">
-<meta name="twitter:title" content="Linear Algebra Lecture 4: Factorization into A = LU">
-<meta property="og:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
-<meta property="twitter:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+<meta property="og:title" content="Linear Algebra Lecture 6: Vectors spaces and subspaces">
+<meta name="twitter:title" content="Linear Algebra Lecture 6: Vectors spaces and subspaces">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
 <meta property="og:site_name" content="我的学习笔记">
-<meta property="og:description" content="
-Inverse of  $ AB,  A^T $
+<meta property="og:description" content="Column space of A: solving Ax = b
 
-Product of elimation matrices
+Null space of A">
+<meta name="twitter:description" content="Column space of A: solving Ax = b
 
-
-A = LU ( no row exchanges)">
-<meta name="twitter:description" content="
-Inverse of  $ AB,  A^T $
-
-Product of elimation matrices
-
-
-A = LU ( no row exchanges)">
+Null space of A">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -92,14 +76,14 @@ A = LU ( no row exchanges)">
   <meta property="twitter:image" content="https://wisblue.github.io/head.png">
 
 
-    <title>Linear Algebra Lecture 4: Factorization into A = LU</title>
+    <title>Linear Algebra Lecture 6: Vectors spaces and subspaces</title>
 
     <link rel="icon" href="https://wisblue.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -248,7 +232,7 @@ A = LU ( no row exchanges)">
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Linear Algebra Lecture 4: Factorization into A = LU
+      Linear Algebra Lecture 6: Vectors spaces and subspaces
     </h1>
   
   
@@ -282,147 +266,9 @@ A = LU ( no row exchanges)">
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <ul>
-<li><p>Inverse of  <code>$ AB,  A^T $</code></p></li>
+              <p>Column space of A: solving Ax = b</p>
 
-<li><p>Product of elimation matrices</p></li>
-</ul>
-
-<p>A = LU ( no row exchanges)</p>
-
-<h3 id="what-s-the-invers-of-ab">What&rsquo;s the invers of AB</h3>
-
-<div>
-$$AA^{-1} = I = A^{-1}A$$
-$$(AB)(B^{-1}A^{-1}) = I$$
-$$B^{-1}A^{-1}AB = I$$
-</div>
-
-<p>Transpose
-<div>
-$$(A^{-1})^T A^T = I $$
-$$(A^{-1})^T = (A^T)^{-1}$$
-</div></p>
-
-<h4 id="find-a-lu-find-l">FInd A = LU, find L.</h4>
-
-<div>
-$$
-E_{21}\quad A  = U
-$$
-</div>
-<div>
-$$
-    \begin{bmatrix}
-    2 & 1   \\\\\\
-    8 & 7 
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    2 & 1  \\\\\\
-    0 & 3 
-    \end{bmatrix}
-$$
-</div>
-<div>
-$$
- A  = L \quad U
-$$
-</div>
-<div>
-$$
-    \begin{bmatrix}
-    2 & 1   \\\\\\
-    8 & 7 
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-     1 & 0   \\\\\\
-     4 & 1
-    \end{bmatrix}
-    \begin{bmatrix}
-    2 & 1  \\\\\\
-    0 & 3 
-    \end{bmatrix}
-$$
-</div>
-U stands for upper triangular.
-L stands for lower triangular.
-
-L U also could be :
-<div>
-$$
-    \begin{bmatrix}
-     1 & 0   \\\\\\
-     4 & 1
-    \end{bmatrix}
-    \begin{bmatrix}
-    2 & 0  \\\\\\
-    0 & 3 
-    \end{bmatrix}
-    \begin{bmatrix}
-    1 & \frac {1}{2}   \\\\\\
-    0 & 1 
-    \end{bmatrix}
-$$
-</div>
-Let's talk 3x3 matrix elimation
-<div>
-$$
-    E_{32}E_{31}E_{21}A = U (no\;row\;exchange)
-$$
-</div>
-I want the invers of Es
-<div>
-$$
-A = E_{21}^{-1}E_{31}^{-1}E_{32}^{-1}U
-$$
-
-$$
-L = E_{21}^{-1}E_{31}^{-1}E_{32}^{-1}
-$$
-</div>
-For eample, 
-<div>
-$$
-E_{21}E_{31} = 
-$$
-
-$$
-    \begin{bmatrix}
-     1 & 0  & 0 \\\\\\
-     0 & 1 & 0 \\\\\\
-     0 & -5 & 1
-    \end{bmatrix}
-    \begin{bmatrix}
-    1 & 0 & 0 \\\\\\
-    -2 & 1 & 0 \\\\\\
-    0 & 0 & 1
-    \end{bmatrix}
-    = 
-    \begin{bmatrix}
-    1 & 0 & 0  \\\\\\
-    -2 & 1 & 0 \\\\\\
-    10 & -5 & 1
-    \end{bmatrix}
-$$
-</div>
-
-<p>A = LU</p>
-
-<h5 id="if-no-row-exchanges-mutipliers-go-directly-into-l">If no row exchanges, mutipliers go directly into L</h5>
-
-<p>How many elimations operations on n x n matrix A?</p>
-
-<p>Typical is multiply and substract.
-first step for first row cost about 99x99 steps, second would cost 98x98 steps&hellip;.
-We can count it as</p>
-
-<div>$$n^2 + (n-1)^2 + ... + 3^2 + 2^2 +1^2 \approx \frac {1}{3}n^3 $$</div>
-
-<h4 id="permutation">Permutation</h4>
-
-<p>$$P^{-1}= P^T$$</p>
+<p>Null space of A</p>
               
             </div>
           </div>
@@ -449,7 +295,7 @@ We can count it as</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/" data-tooltip="Linear Algebra Lecture 3: Multiplication and inverse matrices">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -457,7 +303,7 @@ We can count it as</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/" data-tooltip="MathJax基础教程和快速索引">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -475,19 +321,19 @@ We can count it as</p>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -531,7 +377,7 @@ We can count it as</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/" data-tooltip="Linear Algebra Lecture 3: Multiplication and inverse matrices">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -539,7 +385,7 @@ We can count it as</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/" data-tooltip="MathJax基础教程和快速索引">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -557,19 +403,19 @@ We can count it as</p>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -599,19 +445,19 @@ We can count it as</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-4-factorization-into-a-lu%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-4-factorization-into-a-lu%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-4-factorization-into-a-lu%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -932,9 +778,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/linear-algebra-lecture-4-factorization-into-a-lu\/';
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/linear-algebra-lecture-6-vectors-spaces-and-subspaces\/';
           
-            this.page.identifier = '\/2019\/01\/linear-algebra-lecture-4-factorization-into-a-lu\/'
+            this.page.identifier = '\/2019\/01\/linear-algebra-lecture-6-vectors-spaces-and-subspaces\/'
           
         };
         (function() {

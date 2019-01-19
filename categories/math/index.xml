@@ -40,6 +40,35 @@
     </item>
     
     <item>
+      <title>Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/</guid>
+      <description>&lt;p&gt;Permutation, transpose and space $R^n$&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Lecture 6: Vectors spaces and subspaces</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/</guid>
+      <description>&lt;p&gt;Column space of A: solving Ax = b&lt;/p&gt;
+
+&lt;p&gt;Null space of A&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MathJax基础教程和快速索引</title>
+      <link>https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/</guid>
+      <description>&lt;p&gt;mathjax 基础教程&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Albegra Lecture 1 - Geometry of Linear Equations</title>
       <link>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</link>
       <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>

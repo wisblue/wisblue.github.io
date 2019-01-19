@@ -39,5 +39,25 @@
 &lt;p&gt;A = LU ( no row exchanges)&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/</guid>
+      <description>&lt;p&gt;Permutation, transpose and space $R^n$&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Lecture 6: Vectors spaces and subspaces</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/</guid>
+      <description>&lt;p&gt;Column space of A: solving Ax = b&lt;/p&gt;
+
+&lt;p&gt;Null space of A&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
