@@ -12,16 +12,31 @@
     
     
     <item>
-      <title>Algebra Lecture 3: Factorization into A = LU</title>
-      <link>https://wisblue.github.io/2019/01/algebra-lecture-3-factorization-into-a-lu/</link>
+      <title>Linear Algebra Lecture 3: Multiplication and inverse matrices</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wisblue.github.io/2019/01/algebra-lecture-3-factorization-into-a-lu/</guid>
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Matrix multiplication: (4 ways!)&lt;/li&gt;
 &lt;li&gt;Inverse of  &lt;code&gt;$ A,  AB,  A^T $&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Gaiss-Hordan / Find $A^{-1}​$&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Lecture 4: Factorization into A = LU</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Inverse of  &lt;code&gt;$ AB,  A^T $&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Product of elimation matrices&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A = LU ( no row exchanges)&lt;/p&gt;</description>
     </item>
     
   </channel>
