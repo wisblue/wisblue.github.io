@@ -6,10 +6,23 @@
     <description>Recent content in Math on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algebra Lecture 3: Factorization into A = LU</title>
+      <link>https://wisblue.github.io/2019/01/algebra-lecture-3-factorization-into-a-lu/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/algebra-lecture-3-factorization-into-a-lu/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Matrix multiplication: (4 ways!)&lt;/li&gt;
+&lt;li&gt;Inverse of  &lt;code&gt;$ A,  AB,  A^T $&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gaiss-Hordan / Find $A^{-1}​$&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Albegra Lecture 1 - Geometry of Linear Equations</title>
