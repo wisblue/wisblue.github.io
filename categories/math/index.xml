@@ -6,10 +6,28 @@
     <description>Recent content in Math on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linear Algebra Lecture 7: Solving Ax = 0: pivot variables, special solutions</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-7-solving-ax-0-pivot-variables-special-solutions/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-7-solving-ax-0-pivot-variables-special-solutions/</guid>
+      <description>&lt;p&gt;Ax=b and null space.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Lecture 8: Solving Ax = b: row reduced form R</title>
+      <link>https://wisblue.github.io/2019/01/linear-algebra-lecture-8-solving-ax-b-row-reduced-form-r/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-8-solving-ax-b-row-reduced-form-r/</guid>
+      <description>&lt;p&gt;Ax=b的解&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linear Algebra Lecture 3: Multiplication and inverse matrices</title>
@@ -68,20 +86,20 @@ Null space of A&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Albegra Lecture 1 - Geometry of Linear Equations</title>
-      <link>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</link>
+      <title>Linear Albegra Lecture 1 - Geometry of Linear Equations</title>
+      <link>https://wisblue.github.io/2019/01/linear-albegra-lecture-1-geometry-of-linear-equations/</link>
       <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</guid>
+      <guid>https://wisblue.github.io/2019/01/linear-albegra-lecture-1-geometry-of-linear-equations/</guid>
       <description>&lt;p&gt;Linear Equations vs line and pland vs vectors.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Albegra Lecture 2 - Elimination with matrices</title>
-      <link>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</link>
+      <title>Linear Albegra Lecture 2 - Elimination with matrices</title>
+      <link>https://wisblue.github.io/2019/01/linear-albegra-lecture-2-elimination-with-matrices/</link>
       <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</guid>
+      <guid>https://wisblue.github.io/2019/01/linear-albegra-lecture-2-elimination-with-matrices/</guid>
       <description>&lt;p&gt;Linear Equations vs line and pland vs vectors.&lt;/p&gt;</description>
     </item>
     

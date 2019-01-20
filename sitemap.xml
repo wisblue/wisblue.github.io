@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wisblue.github.io/2019/01/linear-algebra-lecture-7-solving-ax-0-pivot-variables-special-solutions/</loc>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wisblue.github.io/2019/01/linear-algebra-lecture-8-solving-ax-b-row-reduced-form-r/</loc>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2019-01-20T00:00:00+00:00</lastmod>
   </url>
@@ -38,12 +48,12 @@
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/2019/01/albegra-lecture-1-geometry-of-linear-equations/</loc>
+    <loc>https://wisblue.github.io/2019/01/linear-albegra-lecture-1-geometry-of-linear-equations/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/2019/01/albegra-lecture-2-elimination-with-matrices/</loc>
+    <loc>https://wisblue.github.io/2019/01/linear-albegra-lecture-2-elimination-with-matrices/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,25 +88,12 @@
   </url>
   
   <url>
-    <loc>https://wisblue.github.io/tags/algebra/</loc>
-    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wisblue.github.io/categories/algebra/</loc>
-    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wisblue.github.io/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wisblue.github.io/categories/</loc>
-    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,13 +111,13 @@
   
   <url>
     <loc>https://wisblue.github.io/tags/linear-algebra/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wisblue.github.io/categories/linear-algebra/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,13 +135,13 @@
   
   <url>
     <loc>https://wisblue.github.io/tags/math/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wisblue.github.io/categories/math/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

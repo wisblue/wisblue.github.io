@@ -6,19 +6,9 @@
     <description>Recent content in Categories on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Algebra</title>
-      <link>https://wisblue.github.io/categories/algebra/</link>
-      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://wisblue.github.io/categories/algebra/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Computer Science</title>
@@ -32,7 +22,7 @@
     <item>
       <title>Linear Algebra</title>
       <link>https://wisblue.github.io/categories/linear-algebra/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wisblue.github.io/categories/linear-algebra/</guid>
       <description></description>
@@ -50,7 +40,7 @@
     <item>
       <title>Math</title>
       <link>https://wisblue.github.io/categories/math/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wisblue.github.io/categories/math/</guid>
       <description></description>
