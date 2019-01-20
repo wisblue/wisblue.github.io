@@ -8,43 +8,41 @@
 <meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="wisblue">
 <meta name="keywords" content="">
-<meta name="description" content="Column space of A: solving Ax = b
-Null space of A">
+<meta name="description" content="叉积的运算、性质、和几何理解">
 
 
-<meta property="og:description" content="Column space of A: solving Ax = b
-Null space of A">
+<meta property="og:description" content="叉积的运算、性质、和几何理解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linear Algebra Lecture 6: Vectors spaces and subspaces">
-<meta name="twitter:title" content="Linear Algebra Lecture 6: Vectors spaces and subspaces">
-<meta property="og:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
-<meta property="twitter:url" content="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+<meta property="og:title" content="向量运算与理解-叉积">
+<meta name="twitter:title" content="向量运算与理解-叉积">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
 <meta property="og:site_name" content="我的学习笔记">
-<meta property="og:description" content="Column space of A: solving Ax = b
-Null space of A">
-<meta name="twitter:description" content="Column space of A: solving Ax = b
-Null space of A">
+<meta property="og:description" content="叉积的运算、性质、和几何理解">
+<meta name="twitter:description" content="叉积的运算、性质、和几何理解">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2019-01-19T00:00:00">
+    <meta property="article:published_time" content="2019-01-20T00:00:00">
   
   
-    <meta property="article:modified_time" content="2019-01-19T00:00:00">
+    <meta property="article:modified_time" content="2019-01-20T00:00:00">
   
-  
-  
-    
-      <meta property="article:section" content="Math">
-    
-      <meta property="article:section" content="Linear Algebra">
-    
   
   
     
-      <meta property="article:tag" content="Linear Algebra">
+      <meta property="article:section" content="数学">
     
-      <meta property="article:tag" content="Math">
+      <meta property="article:section" content="线性代数">
+    
+  
+  
+    
+      <meta property="article:tag" content="向量">
+    
+      <meta property="article:tag" content="线性代数">
+    
+      <meta property="article:tag" content="数学">
     
   
 
@@ -61,8 +59,8 @@ Null space of A">
 
 
 
-  <meta property="og:image" content="https://wisblue.github.io/img/ml/algebra-10-2019-01-19.png">
-  <meta property="twitter:image" content="https://wisblue.github.io/img/ml/algebra-10-2019-01-19.png">
+  <meta property="og:image" content="https://wisblue.github.io/img/math/Cross_product.gif">
+  <meta property="twitter:image" content="https://wisblue.github.io/img/math/Cross_product.gif">
 
 
 
@@ -72,14 +70,14 @@ Null space of A">
   <meta property="twitter:image" content="https://wisblue.github.io/head.png">
 
 
-    <title>Linear Algebra Lecture 6: Vectors spaces and subspaces</title>
+    <title>向量运算与理解-叉积</title>
 
     <link rel="icon" href="https://wisblue.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -228,19 +226,19 @@ Null space of A">
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Linear Algebra Lecture 6: Vectors spaces and subspaces
+      向量运算与理解-叉积
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-01-19T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-01-20T00:00:00Z">
         
   
   
   
   
-    2019年01月19日
+    2019年01月20日
   
 
       </time>
@@ -250,9 +248,9 @@ Null space of A">
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://wisblue.github.io/categories/math">Math</a>, 
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%95%b0%e5%ad%a6">数学</a>, 
     
-      <a class="category-link" href="https://wisblue.github.io/categories/linear-algebra">Linear Algebra</a>
+      <a class="category-link" href="https://wisblue.github.io/categories/%e7%ba%bf%e6%80%a7%e4%bb%a3%e6%95%b0">线性代数</a>
     
   
 
@@ -262,162 +260,77 @@ Null space of A">
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Column space of A: solving Ax = b
-Null space of A</p>
+              <p>叉积的运算、性质、和几何理解</p>
 
-<h4 id="vector-space">Vector space:</h4>
+<h2 id="向量点积-a-cdot-b">向量点积 $a \cdot b$</h2>
 
-<p>v+w and cv are in the space
-or all vector linear combations cv + dw are in the space</p>
+<p>​   $$a \cdot b = ab\,cos\theta$$</p>
 
-<h4 id="subspace">Subspace</h4>
+<p>​   $$a \cdot b = \sum_{i=0}^na_ib_i$$</p>
 
-<p>Plane through (0 0 0) is a subspace - P</p>
+<ul>
+<li><p>向量内积的几何解释就是<u><strong>一个向量在另一个向量上的投影的积</strong></u>，也就是同方向的积</p></li>
 
-<p>Line through (0 0 0) is a subspace L</p>
+<li><p>特别的，如果一个向量如a是某个坐标轴的单位坐标向量，那么，两个向量的点积$a \cdot b$就是向量b在此坐标轴上的坐标值。这个结论非常重要，这是傅立叶分析的理论基础。</p></li>
 
-<h4 id="is-p-cup-l-a-subspace-no">Is $P \cup L$ a subspace? no</h4>
+<li><p>其他几何意义：从内积数值上我们可以<strong>看出两个向量的在方向上的接近程度</strong>。当内积值为正值时，两个向量大致指向相同的方向（方向夹角小于90度）；当内积值为负值时，两个向量大致指向相反的方向（方向角大于90度）；当内积值为0时，两个向量互相垂直</p></li>
 
-<p>because if I add vector from P and a vector from L is not on the subspace</p>
+<li><p>向量内积的生活解释：单价向量乘以数量向量，得到总价格</p></li>
 
-<h4 id="is-p-cap-l-s-subspace-yes">Is $P \cap L $ s subspace? yes</h4>
+<li><p>向量内积的物理解释：一个斜坡上用力F斜上拉一个物体，位移为S（没有重力的情况下），那么这个力F所作的功</p></li>
+</ul>
 
-<p>$P \cap L $ is zero</p>
+<p>​ $$W = F_sS = FScos\theta$$</p>
 
-<p>Generally Subspace S and T, $S \cap T$ is subspace.</p>
+<h2 id="向量叉积-a-times-b">向量叉积 $ a\times b$</h2>
 
-<h4 id="example">Example</h4>
+<p>叉积$a \times b$是与a 和b都垂直的向量c。其方向由<a href="https://zh.wikipedia.org/wiki/%E5%8F%B3%E6%89%8B%E5%AE%9A%E5%89%87">右手定则</a>决定，<a href="https://zh.wikipedia.org/wiki/%E6%A8%A1%E9%95%BF">模长</a>等于以两个向量为边的<a href="https://zh.wikipedia.org/wiki/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2">平行四边形</a>的面积。</p>
 
-<p>Columne space of A, A is subspace of $R^4$
+<p><img src="https://wisblue.github.io/img/math/Right_hand_rule_cross_product.svg.png" alt="img" /></p>
+
+<p>叉积可以定义为：</p>
+
+<p>$$a \times b = \Vert a \Vert \Vert b \Vert sin(\theta) $$</p>
+
+<p>其中$\theta$表示a 和b在它们所定义的平面上的<a href="https://zh.wikipedia.org/wiki/%E8%A7%92%E5%BA%A6">夹角</a>（$ 0^\circ \leq \theta \leq 180^\circ $)。$\Vert a \Vert$和$\Vert b \Vert$是向量a和b的<a href="https://zh.wikipedia.org/wiki/%E6%A8%A1%E9%95%BF">模长</a>，而n则是一个与 a、b所构成的平面<a href="https://zh.wikipedia.org/wiki/%E5%9E%82%E7%9B%B4">垂直</a>的<a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F">单位向量</a>，方向由<a href="https://zh.wikipedia.org/wiki/%E5%8F%B3%E6%89%8B%E5%AE%9A%E5%89%87">右手定则</a>决定。
+<img src="https://wisblue.github.io/img/math/Cross_product.gif" alt="" /></p>
+
+<h3 id="叉积的计算">叉积的计算</h3>
+
+<p>右手坐标系中，基向量i, j, k满足
 $$
-A =
+i \cdot j = k \\<br />
+j \cdot k = i \\<br />
+k \cdot i = j
+$$
+根据<a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E4%BA%A4%E6%8D%A2%E5%BE%8B">反交换律</a>可以得出：
+$$
+j \cdot i = -k \\<br />
+k \cdot j = -i \\<br />
+i \cdot k = -j
+$$</p>
+
+<h3 id="矩阵表示">矩阵表示</h3>
+
+<p>$$
+u \times v =
 \begin{bmatrix}
-1 &amp; 1 &amp; 2 \\<br />
-2 &amp; 1 &amp; 3 \\<br />
-3 &amp; 1 &amp; 4 \\<br />
-4 &amp; 1 &amp; 5
+i &amp; j &amp; k \\<br />
+u_1&amp; u_2 &amp; u_3 \\<br />
+v_1 &amp; v_2 &amp; v_3
 \end{bmatrix}
 $$</p>
 
-<p>then the columns of A is in subsapce. All the combinations of the columns are in the subspace.</p>
+<p>这个行列式可以使用萨吕法则或拉普拉斯展开计算。使用萨吕法则可以展开为：
+<img src="https://wisblue.github.io/img/math/uxv.svg" alt="" /></p>
 
-<p>Is the subspace full file the 4-D space.</p>
+<p>根据萨呂法则确定u和v的叉积
+<img src="https://wisblue.github.io/img/math/Sarrus_rule_cross_product.svg.png" alt="" /></p>
 
-<p>Does Ax=b have a solution for every b? No
-4 equations with 3 unknowns
-<div>
-$$
-Ax =
-\begin{bmatrix}
-1 &amp; 1 &amp; 2 \\<br />
-2 &amp; 1 &amp; 3 \\<br />
-3 &amp; 1 &amp; 4 \\<br />
-4 &amp; 1 &amp; 5
-\end{bmatrix}
-\begin{bmatrix}
-x_1 \\<br />
-x_2 \\<br />
-x_3
-\end{bmatrix}
-＝
-\begin{bmatrix}
-b_1 \\<br />
-b_2 \\<br />
-b_3 \\<br />
-b_4
-\end{bmatrix}
-$$
-</div></p>
+<p>使用拉普拉斯展开可以沿第一行展开为：
+<img src="https://wisblue.github.io/img/math/uxv2.svg" alt="" /></p>
 
-<p>I can solve Ax=b exactly when b is in the column space.</p>
-
-<pre><code>Can I solve b = [ 1 2 3 4 ]?
-X = [1 0 0] solves it.
-
-Can I sovel b = [ 1 1 1 1]?
-X = [0 1 0] solves it.
-
-b = [0 0 0 0 ] is always OK.
-</code></pre>
-
-<p>*<em>I can solve Ax = b exact when b is a comninations of the columns of A &ndash; C(A)</em></p>
-
-<h5 id="does-each-column-contribute-something-new-or-not">Does each column contribute something new or not?</h5>
-
-<p>For the above example, column 3 is col1 + col2, and does not contribute to the subspace.</p>
-
-<p>so we called column 1 and 2 <strong>independent</strong>.</p>
-
-<p>And <strong>A is 2-D subspace of $R^4$</strong></p>
-
-<h2 id="null-space">Null Space</h2>
-
-<p>all solutions
-$
-X =
-\begin{bmatrix}
-x_1 \\<br />
-x_2 \\<br />
-x_3
-\end{bmatrix}
-$
-to Ax = 0 in $R^3$</p>
-
-<div>
-$$
-Ax = 
-\begin{bmatrix}
-1 & 1 & 2 \\
-2 & 1 & 3 \\
-3 & 1 & 4 \\
-4 & 1 & 5
-\end{bmatrix}
-\begin{bmatrix}
-1 \\
-1 \\
--1 
-\end{bmatrix}
-＝
-\begin{bmatrix}
-0 \\
-0 \\
-0 \\
-0
-\end{bmatrix}
-$$
-</div>
-
-<p>then we have X = c $\begin{bmatrix}
-1 \\<br />
-1 \\<br />
--1 \\<br />
-\end{bmatrix}
-$ would be the solution.</p>
-
-<p>think of geometry , null space is line through zero.</p>
-
-<p>Check the solutuons to Ax = 0 always givce a subspace.</p>
-
-<p><strong>If Av = 0 , and Aw = 0. then A(v+w) = 0</strong>
-because A(v+w) = Av + Aw</p>
-
-<p>and A(12V) = 0 becuase A(12v) = 12Av</p>
-
-<h5 id="do-the-x-solutions-form-a-subspace-when-b-is-not-zero-no">Do the X solutions form a subspace when b is not zero? No</h5>
-
-<p>because zero does not solve the solution, [1 0 0] is solution [0 -1 1].
-it&rsquo;s like a plane does not go thru. origion or line does not go thru the origin.</p>
-
-<p>So X does not form a subspace.</p>
-
-<p><u><strong>Subspace has to go thru. the origin</strong>.</u></p>
-
-<p><strong>Essential of Subspace :</strong></p>
-
-<ul>
-<li>​ <u>columns space: few vectors makes a subsoace</u></li>
-<li>​ <u>the equations has to be satisfied also defines a subspace</u></li>
-</ul>
+<p>(参考：<a href="https://zh.wikipedia.org/wiki/%E5%8F%89%E7%A7%AF">维基百科</a>)</p>
               
             </div>
           </div>
@@ -429,9 +342,11 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/linear-algebra/">Linear Algebra</a>
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E5%90%91%E9%87%8F/">向量</a>
 
-  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/math/">Math</a>
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</a>
 
                   </div>
                 
@@ -444,7 +359,7 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3/" data-tooltip="向量运算与理解">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -452,7 +367,7 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/" data-tooltip="MathJax基础教程和快速索引">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/" data-tooltip="Linear Algebra Lecture 3: Multiplication and inverse matrices">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -470,19 +385,19 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -526,7 +441,7 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/" data-tooltip="Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3/" data-tooltip="向量运算与理解">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -534,7 +449,7 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mathjax%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E5%92%8C%E5%BF%AB%E9%80%9F%E7%B4%A2%E5%BC%95/" data-tooltip="MathJax基础教程和快速索引">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/" data-tooltip="Linear Algebra Lecture 3: Multiplication and inverse matrices">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -552,19 +467,19 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -594,19 +509,19 @@ it&rsquo;s like a plane does not go thru. origion or line does not go thru the o
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E5%2590%2591%25E9%2587%258F%25E8%25BF%2590%25E7%25AE%2597%25E4%25B8%258E%25E7%2590%2586%25E8%25A7%25A3-%25E5%258F%2589%25E7%25A7%25AF%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E5%2590%2591%25E9%2587%258F%25E8%25BF%2590%25E7%25AE%2597%25E4%25B8%258E%25E7%2590%2586%25E8%25A7%25A3-%25E5%258F%2589%25E7%25A7%25AF%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Flinear-algebra-lecture-6-vectors-spaces-and-subspaces%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E5%2590%2591%25E9%2587%258F%25E8%25BF%2590%25E7%25AE%2597%25E4%25B8%258E%25E7%2590%2586%25E8%25A7%25A3-%25E5%258F%2589%25E7%25A7%25AF%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -926,9 +841,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/linear-algebra-lecture-6-vectors-spaces-and-subspaces\/';
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF\/';
           
-            this.page.identifier = '\/2019\/01\/linear-algebra-lecture-6-vectors-spaces-and-subspaces\/'
+            this.page.identifier = '\/2019\/01\/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF\/'
           
         };
         (function() {
