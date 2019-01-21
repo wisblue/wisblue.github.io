@@ -133,6 +133,12 @@
   </url>
   
   <url>
+    <loc>https://wisblue.github.io/tags/golang/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wisblue.github.io/categories/linear-algebra/</loc>
     <lastmod>2019-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
