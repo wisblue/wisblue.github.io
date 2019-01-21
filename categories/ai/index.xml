@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on 我的学习笔记</title>
+    <link>https://wisblue.github.io/categories/ai/</link>
+    <description>Recent content in Ai on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 21 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to learn Tensorflow</title>
+      <link>https://wisblue.github.io/2019/01/how-to-learn-tensorflow/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/how-to-learn-tensorflow/</guid>
+      <description>&lt;p&gt;Steps to learn TensorFlow, from &lt;a href=&#34;https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow&#34;&gt;Quora&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
