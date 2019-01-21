@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="wisblue">
+<meta name="keywords" content="">
+<meta name="description" content="我的学习笔记">
+
+
+<meta property="og:description" content="我的学习笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Python">
+<meta name="twitter:title" content="Python">
+<meta property="og:url" content="https://wisblue.github.io/tags/python/">
+<meta property="twitter:url" content="https://wisblue.github.io/tags/python/">
+<meta property="og:site_name" content="我的学习笔记">
+<meta property="og:description" content="我的学习笔记">
+<meta name="twitter:description" content="我的学习笔记">
+<meta property="og:locale" content="zh-cn">
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@wisblue">
+
+
+  <meta name="twitter:creator" content="@wisblue">
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/head.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/head.png">
+
+
+    <title>Python</title>
+
+    <link rel="icon" href="https://wisblue.github.io/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wisblue.github.io/tags/python/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://wisblue.github.io/tags/python/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://wisblue.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    <link rel="stylesheet" href="https://wisblue.github.io/css/mathjax-style.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
+  </div>
+  
+    
+      <a class="header-right-icon "
+         href="https://wisblue.github.io/#about">
+    
+    
+      <i class="fa fa-lg fa-/head.png"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://wisblue.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">wisblue</h4>
+        
+          <h5 class="sidebar-profile-bio">我的学习笔记</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wisblue" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+        
+
+      
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/">
+          Python与go语言语法对比
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-21T00:00:00Z">
+        
+  
+  
+  
+  
+    2019年01月21日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e8%ae%a1%e7%ae%97%e6%9c%ba">计算机</a>, 
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e8%af%ad%e8%a8%80">语言</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>快速学习python的笔记</p>
+      
+      <p>
+        <a href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/" class="postShorten-excerpt_link link">阅读全文</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://wisblue.github.io/img/ml/tensorflow.jpg"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+            
+
+          </section>
+        
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+    
+    <h4 id="about-card-name">wisblue</h4>
+    
+      <div id="about-card-bio">我的学习笔记</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        wisblue@gmail.com
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
+                <h3 class="media-heading">How to learn Tensorflow</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Steps to learn TensorFlow, from <a href="https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow">Quora</a></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/">
+                <h3 class="media-heading">Python与go语言语法对比</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>快速学习python的笔记</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-7-solving-ax-0-pivot-variables-special-solutions/">
+                <h3 class="media-heading">Linear Algebra Lecture 7: Solving Ax = 0: pivot variables, special solutions</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Ax=b and null space.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-8-solving-ax-b-row-reduced-form-r/">
+                <h3 class="media-heading">Linear Algebra Lecture 8: Solving Ax = b: row reduced form R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Ax=b的解</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3/">
+                <h3 class="media-heading">向量运算与理解</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>线性空间计算的基本法则与代数、几何、物理理解。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E5%90%91%E9%87%8F%E8%BF%90%E7%AE%97%E4%B8%8E%E7%90%86%E8%A7%A3-%E5%8F%89%E7%A7%AF/">
+                <h3 class="media-heading">向量运算与理解-叉积</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>叉积的运算、性质、和几何理解</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-3-multiplication-and-inverse-matrices/">
+                <h3 class="media-heading">Linear Algebra Lecture 3: Multiplication and inverse matrices</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><ul>
+<li>Matrix multiplication: (4 ways!)</li>
+<li>Inverse of  <code>$ A,  AB,  A^T $</code></li>
+<li>Gaiss-Hordan / Find $A^{-1}​$</li>
+</ul></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-4-factorization-into-a-lu/">
+                <h3 class="media-heading">Linear Algebra Lecture 4: Factorization into A = LU</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><ul>
+<li><p>Inverse of  <code>$ AB,  A^T $</code></p></li>
+
+<li><p>Product of elimation matrices</p></li>
+</ul>
+
+<p>A = LU ( no row exchanges)</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-5-transposes-permutations-spaces-rn/">
+                <h3 class="media-heading">Linear Algebra Lecture 5: Transposes, permutations, spaces $R^n$</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Permutation, transpose and space $R^n$</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/linear-algebra-lecture-6-vectors-spaces-and-subspaces/">
+                <h3 class="media-heading">Linear Algebra Lecture 6: Vectors spaces and subspaces</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Column space of A: solving Ax = b
+Null space of A</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         19 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://wisblue.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://wisblue.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+
+    
+  </body>
+</html>
+
