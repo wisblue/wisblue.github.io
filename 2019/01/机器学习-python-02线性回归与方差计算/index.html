@@ -8,19 +8,43 @@
 <meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="wisblue">
 <meta name="keywords" content="">
-<meta name="description" content="我的学习笔记">
+<meta name="description" content="pytho线性回归的示例程序。">
 
 
-<meta property="og:description" content="我的学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tensorflow">
-<meta name="twitter:title" content="Tensorflow">
-<meta property="og:url" content="https://wisblue.github.io/categories/tensorflow/">
-<meta property="twitter:url" content="https://wisblue.github.io/categories/tensorflow/">
+<meta property="og:description" content="pytho线性回归的示例程序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习-Python 02：线性回归与方差计算">
+<meta name="twitter:title" content="机器学习-Python 02：线性回归与方差计算">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
 <meta property="og:site_name" content="我的学习笔记">
-<meta property="og:description" content="我的学习笔记">
-<meta name="twitter:description" content="我的学习笔记">
+<meta property="og:description" content="pytho线性回归的示例程序。">
+<meta name="twitter:description" content="pytho线性回归的示例程序。">
 <meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-22T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-22T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="机器学习">
+    
+      <meta property="article:section" content="回归">
+    
+  
+  
+    
+      <meta property="article:tag" content="回归">
+    
+      <meta property="article:tag" content="股市">
+    
+      <meta property="article:tag" content="机器学习">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -35,6 +59,9 @@
 
 
 
+  <meta property="og:image" content="https://wisblue.github.io/img/ml/linear_regression.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/img/ml/linear_regression.png">
+
 
 
 
@@ -43,16 +70,14 @@
   <meta property="twitter:image" content="https://wisblue.github.io/head.png">
 
 
-    <title>Tensorflow</title>
+    <title>机器学习-Python 02：线性回归与方差计算</title>
 
     <link rel="icon" href="https://wisblue.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wisblue.github.io/categories/tensorflow/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://wisblue.github.io/categories/tensorflow/">
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -73,7 +98,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="2">
+      <header id="header" data-behavior="5">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
@@ -91,7 +116,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="2">
+      <nav id="sidebar" data-behavior="5">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -190,44 +215,30 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="2"
+      <div id="main" data-behavior="5"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
+    <h1 class="post-title" itemprop="headline">
+      机器学习-Python 02：线性回归与方差计算
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
-          How to learn Tensorflow
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-01-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-01-22T00:00:00Z">
         
   
   
   
   
-    2019年01月21日
+    2019年01月22日
   
 
       </time>
@@ -237,42 +248,315 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://wisblue.github.io/categories/ai">AI</a>, 
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">机器学习</a>, 
     
-      <a class="category-link" href="https://wisblue.github.io/categories/tensorflow">TensorFlow</a>
+      <a class="category-link" href="https://wisblue.github.io/categories/%e5%9b%9e%e5%bd%92">回归</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>pytho线性回归的示例程序。</p>
+
+<pre><code class="language-python"># ########################
+# 线性回归                #
+#   计算、误差估计与偏差评估 #
+##########################
+# 参考： https://pythonprogramming.net/regression-introduction-machine-learning-tutorial/?completed=/machine-learning-tutorial-python-introduction/
+import pandas as pd 
+import quandl
+
+import numpy as np
+from sklearn import preprocessing, svm
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+
+import math
+import matplotlib.pyplot as plt
+
+# 获取goole股票历史数据
+df = quandl.get('WIKI/GOOGL') # returns dataframe
+
+# print(df.head())
+
+# 取得其中一部分列
+df = df[['Adj. Open', 'Adj. High','Adj. Low','Adj. Close','Adj. Volume', ]]
+
+# High-Low PerCenTage - 计算最高-最低的百分比
+df['HL_PCT'] = (df['Adj. High'] - df['Adj. Low']) / df['Adj. Close'] * 100
+# open-close percentage change - 计算闭市-开市的增长百分比
+df['PCT_change'] = (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Open'] * 100
+
+# 定义新的数据集
+df = df[['Adj. Close', 'HL_PCT', 'PCT_change', 'Adj. Volume']]
+
+# 增加一列标签
+forecast_col = 'Adj. Close'
+# 标记其中的空值
+df.fillna(-99999, inplace=True) # fill holes inplace with value -99999
+
+# 取得其中一部分列用于预测
+forecast_out = int(math.ceil(0.01*len(df))) # len(df) = 3424
+
+# 将 forecast_col('Adj. Close') 向上移动 #forecast_out 行
+# 并赋值给 'label' 列
+df['label'] = df[forecast_col].shift(-forecast_out)
+
+# 去除NA的列
+df.dropna(inplace=True) 
+
+# 定义 X 为特征值, 作为dataframe - 除了label列,
+# 然后转换成numpy array
+X = np.array(df.drop(['label'],1 ))
+# 定义 y 作为对应特征值的标签
+y = np.array(df['label'])
+
+# 预处理，即规范化数据。scale X = (X-X_mean)/X_std, 对每个属性/每列来说所有数据都聚集在0附近，方差值为1。
+# 参见: https://blog.csdn.net/Dream_angel_Z/article/details/49406573
+X = preprocessing.scale(X, axis=0, with_mean=True,with_std=True)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=-0.2)
+
+# n_jobs : 设置线程数， -1 自动设定
+clf = LinearRegression(n_jobs=-1)
+
+# 拟合数据
+# 参考: https://ithelp.ithome.com.tw/articles/10206114
+clf.fit(X_train, y_train)
+accuracy = clf.score(X_test, y_test)
+
+print(accuracy)
+
+#for k in ['linear','poly','rbf','sigmoid']:
+#    clf = svm.SVR(kernel=k, gamma='scale')
+#    clf.fit(X_train, y_train)
+#    confidence = clf.score(X_test, y_test)
+#    print(k,confidence)
+
+# X 为列，转置为行，便于和y_pred绘制
+xfit = np.transpose(X_test)[0]
+y_pred = clf.predict(X_test)
+
+# 线性方程的系数
+print('Coefficients: \n', clf.coef_)
+# 平方差
+print(&quot;Mean squared error: %.2f&quot; % mean_squared_error(y_test, y_pred))
+# Explained variance score 可解释方差: 1 为最佳预测
+print('Variance score: %.2f' % r2_score(y_test, y_pred))
+
+# 画输入点为灰色
+plt.scatter(xfit, y_test, color='gray')
+# 预测点为绿色
+plt.scatter(xfit, y_pred, color='green')
+
+# 显示绘制的图形
+plt.show()
+</code></pre>
+
+<p><img src="https://wisblue.github.io/img/ml/linear_regression.png" alt="" /></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E5%9B%9E%E5%BD%92/">回归</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E8%82%A1%E5%B8%82/">股市</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" data-tooltip="理解最小二乘法">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        <p>Steps to learn TensorFlow, from <a href="https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow">Quora</a></p>
-      
-      <p>
-        <a href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/" class="postShorten-excerpt_link link">阅读全文</a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
-      </p>
-    </div>
-  </div>
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
   
-    <a href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://wisblue.github.io/img/ml/tensorflow.jpg"/>
-      </div>
-    </a>
-  
-</article>
+</div>
 
             
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
             
-
-          </section>
-        
+          </div>
+        </article>
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" data-tooltip="理解最小二乘法">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E6%259C%25BA%25E5%2599%25A8%25E5%25AD%25A6%25E4%25B9%25A0-python-02%25E7%25BA%25BF%25E6%2580%25A7%25E5%259B%259E%25E5%25BD%2592%25E4%25B8%258E%25E6%2596%25B9%25E5%25B7%25AE%25E8%25AE%25A1%25E7%25AE%2597%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E6%259C%25BA%25E5%2599%25A8%25E5%25AD%25A6%25E4%25B9%25A0-python-02%25E7%25BA%25BF%25E6%2580%25A7%25E5%259B%259E%25E5%25BD%2592%25E4%25B8%258E%25E6%2596%25B9%25E5%25B7%25AE%25E8%25AE%25A1%25E7%25AE%2597%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E6%259C%25BA%25E5%2599%25A8%25E5%25AD%25A6%25E4%25B9%25A0-python-02%25E7%25BA%25BF%25E6%2580%25A7%25E5%259B%259E%25E5%25BD%2592%25E4%25B8%258E%25E6%2596%25B9%25E5%25B7%25AE%25E8%25AE%25A1%25E7%25AE%2597%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -569,6 +853,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97\/';
+          
+            this.page.identifier = '\/2019\/01\/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

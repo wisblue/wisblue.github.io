@@ -6,10 +6,19 @@
     <description>Recent content in 回归 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 21 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/tags/%E5%9B%9E%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习-Python 02：线性回归与方差计算</title>
+      <link>https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/</guid>
+      <description>&lt;p&gt;pytho线性回归的示例程序。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>机器学习-Python 01：安装与数据</title>

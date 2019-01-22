@@ -8,19 +8,41 @@
 <meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="wisblue">
 <meta name="keywords" content="">
-<meta name="description" content="我的学习笔记">
+<meta name="description" content="如题.">
 
 
-<meta property="og:description" content="我的学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tensorflow">
-<meta name="twitter:title" content="Tensorflow">
-<meta property="og:url" content="https://wisblue.github.io/categories/tensorflow/">
-<meta property="twitter:url" content="https://wisblue.github.io/categories/tensorflow/">
+<meta property="og:description" content="如题.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数讲座 9: 线性独立，空间基、线性空间生成">
+<meta name="twitter:title" content="线性代数讲座 9: 线性独立，空间基、线性空间生成">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
 <meta property="og:site_name" content="我的学习笔记">
-<meta property="og:description" content="我的学习笔记">
-<meta name="twitter:description" content="我的学习笔记">
+<meta property="og:description" content="如题.">
+<meta name="twitter:description" content="如题.">
 <meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-22T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-22T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="数学">
+    
+      <meta property="article:section" content="线性代数">
+    
+  
+  
+    
+      <meta property="article:tag" content="线性代数">
+    
+      <meta property="article:tag" content="数学">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -35,6 +57,9 @@
 
 
 
+  <meta property="og:image" content="https://wisblue.github.io/img/ml/null%20space.jpg">
+  <meta property="twitter:image" content="https://wisblue.github.io/img/ml/null%20space.jpg">
+
 
 
 
@@ -43,16 +68,14 @@
   <meta property="twitter:image" content="https://wisblue.github.io/head.png">
 
 
-    <title>Tensorflow</title>
+    <title>线性代数讲座 9: 线性独立，空间基、线性空间生成</title>
 
     <link rel="icon" href="https://wisblue.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wisblue.github.io/categories/tensorflow/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://wisblue.github.io/categories/tensorflow/">
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -73,7 +96,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="2">
+      <header id="header" data-behavior="5">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
@@ -91,7 +114,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="2">
+      <nav id="sidebar" data-behavior="5">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -190,44 +213,30 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="2"
+      <div id="main" data-behavior="5"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
+    <h1 class="post-title" itemprop="headline">
+      线性代数讲座 9: 线性独立，空间基、线性空间生成
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
-          How to learn Tensorflow
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-01-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-01-22T00:00:00Z">
         
   
   
   
   
-    2019年01月21日
+    2019年01月22日
   
 
       </time>
@@ -237,42 +246,239 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://wisblue.github.io/categories/ai">AI</a>, 
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%95%b0%e5%ad%a6">数学</a>, 
     
-      <a class="category-link" href="https://wisblue.github.io/categories/tensorflow">TensorFlow</a>
+      <a class="category-link" href="https://wisblue.github.io/categories/%e7%ba%bf%e6%80%a7%e4%bb%a3%e6%95%b0">线性代数</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>如题.</p>
+
+<p><strong>假设矩阵A行列数是mxn， m &lt; n（未知数多于等式数），于是存在有Ax=0的非零解。此矩阵至少有一个自由变量。</strong></p>
+
+<p><strong>Independent: 线性独立</strong>：或称为线性无关。系数非0的线性组合不为0.</p>
+
+<p>​   向量互相独立，则他们构成的矩阵的零空间是零向量。</p>
+
+<p><strong>线性非独立</strong>， 则存在C，C非零，而且Ac=0成立。</p>
+
+<p>pivot column：枢轴列</p>
+
+<p><strong>span the space: 线性生成空间</strong> <a href="https://zh.wikipedia.org/zh-hans/%E7%BA%BF%E6%80%A7%E7%94%9F%E6%88%90%E7%A9%BA%E9%97%B4">wiki</a>, 所以可能的组合； 空间是所有向量的线性组合。</p>
+
+<p>rank of A: A的秩=枢轴列的个数=列空间的维度（subspace)</p>
+
+<p><strong>basis： 基</strong> ：组合线性<strong>独立</strong>向量并<strong>生成</strong>线性空间</p>
+
+<p><strong>null space: 零空间的维数=自由变量的个数=空间的维数-矩阵的秩</strong></p>
+
+<p>invertable： 不可逆。 说明rank(A) &lt; n</p>
+
+<p>任何一个空间的基都有相同数量的向量，且与空间的维度相等。</p>
+
+<p>参考：  <a href="https://www.youtube.com/watch?v=yjBerM5jWsc&amp;t=261s">youtube</a></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" data-tooltip="理解最小二乘法">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/" data-tooltip="How to learn Tensorflow">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        <p>Steps to learn TensorFlow, from <a href="https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow">Quora</a></p>
-      
-      <p>
-        <a href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/" class="postShorten-excerpt_link link">阅读全文</a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
-      </p>
-    </div>
-  </div>
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
   
-    <a href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://wisblue.github.io/img/ml/tensorflow.jpg"/>
-      </div>
-    </a>
-  
-</article>
+</div>
 
             
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
             
-
-          </section>
-        
+          </div>
+        </article>
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/" data-tooltip="理解最小二乘法">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/" data-tooltip="How to learn Tensorflow">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E8%25AE%25B2%25E5%25BA%25A7-9-%25E7%25BA%25BF%25E6%2580%25A7%25E7%258B%25AC%25E7%25AB%258B%25E7%25A9%25BA%25E9%2597%25B4%25E5%259F%25BA%25E7%25BA%25BF%25E6%2580%25A7%25E7%25A9%25BA%25E9%2597%25B4%25E7%2594%259F%25E6%2588%2590%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E8%25AE%25B2%25E5%25BA%25A7-9-%25E7%25BA%25BF%25E6%2580%25A7%25E7%258B%25AC%25E7%25AB%258B%25E7%25A9%25BA%25E9%2597%25B4%25E5%259F%25BA%25E7%25BA%25BF%25E6%2580%25A7%25E7%25A9%25BA%25E9%2597%25B4%25E7%2594%259F%25E6%2588%2590%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E8%25AE%25B2%25E5%25BA%25A7-9-%25E7%25BA%25BF%25E6%2580%25A7%25E7%258B%25AC%25E7%25AB%258B%25E7%25A9%25BA%25E9%2597%25B4%25E5%259F%25BA%25E7%25BA%25BF%25E6%2580%25A7%25E7%25A9%25BA%25E9%2597%25B4%25E7%2594%259F%25E6%2588%2590%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -569,6 +775,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90\/';
+          
+            this.page.identifier = '\/2019\/01\/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
