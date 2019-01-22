@@ -6,10 +6,19 @@
     <description>Recent content in 数学 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 20 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>理解最小二乘法</title>
+      <link>https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</guid>
+      <description>&lt;p&gt;摘要：关于如何理解最小二乘法的网上资源。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>向量运算与理解</title>
