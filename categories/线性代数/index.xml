@@ -21,6 +21,24 @@
     </item>
     
     <item>
+      <title>线性代数讲座 11: 矩阵空间</title>
+      <link>https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-11-%E7%9F%A9%E9%98%B5%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-11-%E7%9F%A9%E9%98%B5%E7%A9%BA%E9%97%B4/</guid>
+      <description>&lt;p&gt;新向量空间的基础，秩为1的矩阵，小世界图画&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>转载:《理解矩阵》-孟岩</title>
+      <link>https://wisblue.github.io/2019/01/%E8%BD%AC%E8%BD%BD%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E5%AD%9F%E5%B2%A9/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E8%BD%AC%E8%BD%BD%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E5%AD%9F%E5%B2%A9/</guid>
+      <description> 理解矩阵（一） 理解矩阵（二） 理解矩阵（三） 《新理解矩阵1》：矩阵是什么？ 《新理解矩阵2》：矩阵是什么？《新理解矩阵3》：行列式的点滴 《新理解矩阵4》：相似矩阵的那些事儿 《新理解矩阵5》：体积=行列式 《新理解矩阵6》：为什么只有方阵有行列式？ </description>
+    </item>
+    
+    <item>
       <title>线性代数讲座 9: 线性独立，空间基、线性空间生成</title>
       <link>https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
