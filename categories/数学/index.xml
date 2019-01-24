@@ -6,10 +6,19 @@
     <description>Recent content in 数学 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 23 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>理解矩阵</title>
+      <link>https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/</guid>
+      <description>&lt;p&gt;综合整理对矩阵的理解&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>线性代数讲座 10: 四个基础的子空间</title>

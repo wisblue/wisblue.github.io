@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="wisblue">
+<meta name="keywords" content="">
+<meta name="description" content="综合整理对矩阵的理解">
+
+
+<meta property="og:description" content="综合整理对矩阵的理解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解矩阵">
+<meta name="twitter:title" content="理解矩阵">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+<meta property="og:site_name" content="我的学习笔记">
+<meta property="og:description" content="综合整理对矩阵的理解">
+<meta name="twitter:description" content="综合整理对矩阵的理解">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-24T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-24T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="数学">
+    
+      <meta property="article:section" content="线性代数">
+    
+  
+  
+    
+      <meta property="article:tag" content="线性代数">
+    
+      <meta property="article:tag" content="数学">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@wisblue">
+
+
+  <meta name="twitter:creator" content="@wisblue">
+
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/img/math/matrix.jpeg">
+  <meta property="twitter:image" content="https://wisblue.github.io/img/math/matrix.jpeg">
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/head.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/head.png">
+
+
+    <title>理解矩阵</title>
+
+    <link rel="icon" href="https://wisblue.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://wisblue.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    <link rel="stylesheet" href="https://wisblue.github.io/css/mathjax-style.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
+  </div>
+  
+    
+      <a class="header-right-icon "
+         href="https://wisblue.github.io/#about">
+    
+    
+      <i class="fa fa-lg fa-/head.png"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://wisblue.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">wisblue</h4>
+        
+          <h5 class="sidebar-profile-bio">我的学习笔记</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wisblue" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      理解矩阵
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-24T00:00:00Z">
+        
+  
+  
+  
+  
+    2019年01月24日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%95%b0%e5%ad%a6">数学</a>, 
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e7%ba%bf%e6%80%a7%e4%bb%a3%e6%95%b0">线性代数</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>综合整理对矩阵的理解</p>
+
+<h1 id="向量">向量</h1>
+
+<ul>
+<li>向量是什么
+
+<ul>
+<li>向量是具有n个相互独立的性质。</li>
+<li>向量本身可以看成n x 1 的矩阵。</li>
+</ul></li>
+
+<li><p>向量操作</p>
+
+<ul>
+<li><p>线性组合：$c \textbf{v} + d \textbf{w} = c
+\begin{bmatrix}
+1\\\\<br />
+1
+\end{bmatrix}
++d
+\begin{bmatrix}
+2 \\<br />
+3
+\end{bmatrix}=\begin{bmatrix}
+c+2d\\<br />
+c+3d
+\end{bmatrix}
+$</p>
+
+<ul>
+<li>二维情况，若w与v不共线，线性组合$c \textbf{v}+d \textbf{w}$ 生成2维平面</li>
+</ul></li>
+
+<li><p>点积 (数值积、标量积、内积)</p>
+
+<ul>
+<li>代数定义：$v \cdot w = \sum_{i=1}^n a_ib_i$ , n = dim S(v)</li>
+<li>$v \cdot w = v^Tw$</li>
+<li>几何定义: $v \cdot w = \vert a \vert \vert b \vert cos\theta$</li>
+<li>一个向量在另一个向量上投影的积</li>
+<li>如果v是某坐标轴的单位向量，两个向量的点积a⋅ba⋅b就是向量b在此坐标轴上的坐标值。这个结论非常重要，这是傅立叶分析的理论基础。</li>
+<li>从内积数值上我们可以<strong>看出两个向量的在方向上的接近程度</strong>。当内积值为正值时，两个向量大致指向相同的方向（方向夹角小于90度）；当内积值为负值时，两个向量大致指向相反的方向（方向角大于90度）；当内积值为0时，两个向量互相垂直。</li>
+<li>向量内积的解释
+
+<ul>
+<li>力学：一个斜坡上用力F斜上拉一个物体，位移为S（没有重力的情况下），那么这个力F所作的功：$W=F_sS=FScos\theta$</li>
+<li>电路：热损失=(压降)(电流)=$e^Ty$</li>
+<li>经济: 收入= (数量)(价格) = $q^Tp$</li>
+</ul></li>
+</ul></li>
+
+<li><p>长度（大小(Magnitude)、模长、范数) : $\Vert v \Vert=\sqrt{v \cdot v}$</p>
+
+<ul>
+<li>$\vert v \cdot w \vert \leq \sqrt {\Vert v \Vert \Vert w \Vert}$</li>
+</ul></li>
+
+<li><p>表示方法：</p>
+
+<ul>
+<li>两个数值</li>
+<li>从原点出发的箭头</li>
+<li>平面上的一个点</li>
+</ul></li>
+
+<li><p>单位向量</p>
+
+<ul>
+<li>定义：$u=v/ \Vert v \Vert$是与v同方向的单位向量。</li>
+</ul></li>
+
+<li><p>柯西-施瓦茨不等式(Schwars inequality):</p>
+
+<ul>
+<li>$\vert v \cdot w \vert  \leq \Vert v \Vert \Vert w \Vert$</li>
+<li><img src="https://wisblue.github.io/img/Screen Shot 2019-01-24 09.34.02.jpg" alt="" /></li>
+</ul></li>
+
+<li><p>三角不等式:</p>
+
+<ul>
+<li>$\Vert v + w \Vert \leq \Vert v \Vert + \Vert w \Vert$</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="矩阵">矩阵</h1>
+
+<ul>
+<li><p>线性方程 Ax = b的解$x=A^-1b$</p></li>
+
+<li><p>矩阵A作用于向量x,结果Ax是A的列向量的线性组合。</p></li>
+
+<li><p>Ax是x与A各行的点积 <img src="https://wisblue.github.io/img/Screen Shot 2019-01-24 09.42.10.jpg" alt="" /></p></li>
+
+<li><p>逆矩阵： $x = A^{-1}b$</p></li>
+
+<li><p>循环差(Cyclic differences)的解是常数C=(c c c)<img src="https://wisblue.github.io/img/Screen Shot 2019-01-24 09.58.35.jpg" alt="" /></p></li>
+
+<li><p>独立与非独立</p>
+
+<ul>
+<li>独立：w与u和v不共面</li>
+<li>非独立：$w^*与u和v共面</li>
+</ul></li>
+
+<li><p>运算</p>
+
+<ul>
+<li>A(BC) = (AB)C</li>
+<li>A(B+C) = AB+AC</li>
+<li>$AB \neq BA$</li>
+<li>置换(permutation)</li>
+<li>行交换：$P_{ij}$是单位矩阵i，j两行的互换</li>
+<li><img src="https://wisblue.github.io/img/Screen Shot 2019-01-24 10.25.42.jpg" alt="" /></li>
+<li>AB=C, $C_{ij}$是A中第i行和B中第j列的点积</li>
+<li>$ A = [A1 A2],  B =\begin{bmatrix} B_1 \\\ B2 \end{bmatrix} =&gt; AB = A_1B_1 + A_2B_2$</li>
+<li>$(A^p)(A^q) = A^{p+q}$</li>
+<li>$A^{-1}A = A, AA^{-1}=I$</li>
+<li>转置
+
+<ul>
+<li>$(A^T)_{ij} = A_ji$</li>
+<li>$(AB)^T=B^TA^T$</li>
+<li>$(A^{-1})^T=(A^T)^{-1}$</li>
+<li>$x \cdot y = x^Ty$</li>
+</ul></li>
+</ul></li>
+
+<li><p>对称矩阵</p>
+
+<ul>
+<li>$S^T=S$</li>
+</ul></li>
+
+<li><p>正交矩阵(orthogonal matrix)</p>
+
+<ul>
+<li>$Q^T = Q^{-1}$<br /></li>
+</ul></li>
+
+<li><p>逆矩阵</p>
+
+<ul>
+<li>可逆：</li>
+<li>算法测试：消元：A有n个非零主元(pivot)</li>
+<li>代数测试: det A $\ne$ 0</li>
+<li>方程测试：Ax=0， x=0是唯一解</li>
+<li>A, B,C可逆，则ABC可逆，且有$(AB)^{-1} = B^{-1}A^{-1},(ABC)^{-1} = C^{-1}B^{-1}A^{-1}$</li>
+<li>$A A^{-1} = I$, 用高斯-约旦消元法由 $\begin{bmatrix} A &amp; I \end{bmatrix}$可得$\begin{bmatrix} I &amp; A^{-1} \end{bmatrix}$</li>
+</ul></li>
+
+<li><p>奇异矩阵(singular matrix</p>
+
+<ul>
+<li>行列式为0</li>
+<li>有无穷多个解</li>
+</ul></li>
+
+<li><p>相似矩阵</p>
+
+<ul>
+<li>A与B是同一个线性变换的两个不同的描述（之所以会不同，是因为选定了不同的基，也就是选定了不同的坐标系），则一定能找到一个非奇异矩阵P，使得A、B之间满足这样的关系：$A = P^{-1}BP$</li>
+<li><strong>一族相似矩阵都是同一个线性变换的描述</strong></li>
+</ul></li>
+
+<li><p>矩阵的本质是什么？</p>
+
+<ul>
+<li>矩阵的本质是运动的描述。是线性空间里跃迁的描述</li>
+<li>矩阵不仅可以作为线性变换的描述，而且可以作为一组基的描述。而作为变换的矩阵，不但可以把线性空间中的一个点给变换到另一个点去，而且也能够把线性空间中的一个坐标系（基）表换到另一个坐标系（基）去。而且，变换点与变换坐标系，具有异曲同工的效果。线性代数里最有趣的奥妙，就蕴含在其中。理解了这些内容，线性代数里很多定理和规则会变得更加清晰、直觉。</li>
+<li>矩阵描述了一个坐标系。</li>
+</ul></li>
+</ul>
+
+<p>线性变换是什么？</p>
+
+<ul>
+<li>线性变换，就是从一个线性空间V的某一个点跃迁到另一个线性空间W的另一个点的运动。</li>
+<li>矩阵与向量相乘，就是实施运动（变换）的过程.</li>
+<li>Ax = b的意思是：
+
+<ul>
+<li>“向量a经过矩阵A所描述的变换，变成了向量b。</li>
+<li>有一个向量，它在坐标系A的度量下得到的度量结果向量为a，那么它在坐标系I的度量下，这个向量的度量结果是b。因为Mx=Ib。</li>
+</ul></li>
+<li>对坐标系施加变换的方法，就是让表示那个坐标系的矩阵与表示那个变化的矩阵相乘。</li>
+</ul>
+
+<h1 id="线性方程的解">线性方程的解</h1>
+
+<ul>
+<li>行表达式显示
+
+<ul>
+<li>二维：两条线交于一点，及方程的解</li>
+<li>三维：三个平面交于一点</li>
+</ul></li>
+<li>列表达式方程A作用于向量x生成向量b
+
+<ul>
+<li>线性变换，就是从一个线性空间V的某一个点跃迁到另一个线性空间W的另一个点的运动。</li>
+<li>矩阵与向量相乘，就是实施运动（变换）的过程.</li>
+<li>Ax = b的意思是：</li>
+<li>“向量a经过矩阵A所描述的变换，变成了向量b。</li>
+<li>有一个向量，它在坐标系A的度量下得到的度量结果向量为a，那么它在坐标系I的度量下，这个向量的度量结果是b。因为Mx=Ib。</li>
+<li>对坐标系施加变换的方法，就是让表示那个坐标系的矩阵与表示那个变化的矩阵相乘。<br /></li>
+</ul></li>
+<li>消元 = 因式分解： A = LU
+
+<ul>
+<li>需要$n^3$次计算<br /></li>
+</ul></li>
+</ul>
+
+<h1 id="空间">空间</h1>
+
+<h3 id="定义">定义</h3>
+
+<ul>
+<li>标准n维空间$R^n$包含所有带有n个元素的列向量</li>
+<li>如果v， w是空间S的向量，cv+dw的线性组合一定在S空间内</li>
+<li>S空间的向量，可以是矩阵或者x的函数。零空间是包含一个点x=0的空间</li>
+<li>$R^n$的子空间，是$R^n$内向量的线性空间，例如线y=3x位于$R^2$内
+
+<ul>
+<li>v+w在子空间内</li>
+<li>cv在子空间内</li>
+<li>0v必须在子空间内，所以每个子空间都包含零向量
+
+<ul>
+<li>不通过原点的平面不是子空间</li>
+</ul></li>
+<li>包含v， w的子空间，必须包含所有cv+dw的线性组合</li>
+</ul></li>
+<li>矩阵A的列空间包含所有A的列的线性组合，是$R^m$的子空间。</li>
+<li>列空间包含所有向量Ax。当b位于A的列空间C(A)中，Ax=b才有解</li>
+<li>向量空间的例子
+
+<ul>
+<li>M 所有 n x n矩阵构成的向量空间</li>
+<li>F 实函数f(x) 构成的向量空间</li>
+<li>Z 只包含一个零向量的向量空间</li>
+</ul></li>
+<li>零空间
+
+<ul>
+<li>$R^n$中的零空间N(A)包含所有x使得Ax=0的解。此解集包括x=0</li>
+<li>消元不改变零空间：N(A) = N(U)=N&reg;</li>
+<li>The reduced row echelon form R = rref(A) has all pivots= 1, with zeros above and below</li>
+<li>如果矩阵R的j列是自由的（没有主元），则Ax=0有$x_j=1$的特殊解。</li>
+<li>主元的个数=R中非零的行数=R的秩r，于是n-r=自由列数</li>
+</ul></li>
+<li>Ax=b
+
+<ul>
+<li>全部解: $x = x_p + x_n$</li>
+<li>对$[A\; b]$消元，得到$[R\; d]$, 那么Ax=b等效于Rx=d</li>
+<li>Ax=b和Rx=d只有所有在R中的0行在d中也是0</li>
+<li>如果Rx=d有解，那么特解xp的所有自由变量都是0</li>
+<li>当N(A) = 0 时，A有所有列的秩是满的（A has full coliumn rand) r = n</li>
+<li>当列空间C(A)为$R^m$, A所有行的秩是满的， r = m：Ax=b永远有解</li>
+<li>四种情况</li>
+<li>r = m = n: 可逆</li>
+<li>r = m &lt; n: Ax=b有解</li>
+<li>r = n &lt; m: Ax=b有1个或0个解</li>
+<li>r &lt; m, r &lt; n: 0 或 $\infty$</li>
+</ul></li>
+<li>独立、基和维度
+
+<ul>
+<li>A的独立列：Ax=0的唯一解x=0. 所以零空间是Z</li>
+<li>独立向量：所以零组合$c_1v_1+&hellip;+c_kv_k = 0$, 且所有c=0</li>
+<li>m &lt; n的矩阵A有独立列，那么A至少有n-m个独立向量/特解</li>
+<li>如果S是v的所有线性组合，那么$v_1, &hellip;v_k$生成空间S</li>
+<li>当向量$v_1, &hellip;v_k$独立且生成S，$v_1, …v_k$是S的基</li>
+<li>S的维度 dim S 等于 S的基的向量的个数</li>
+<li>如果A是4x4的可逆矩阵，那么他的列是$R^4$的基。 dim $R^4$ = 4</li>
+</ul></li>
+<li>四个子空间的维度
+
+<ul>
+<li>dim C(A) = dim $C(A^T) = r = rank(A)</li>
+<li>dim N(A) = n - r, dim $N(A^T)$ = m - r</li>
+<li>消元生成行空间的基和N(A), 他们与R相同</li>
+<li>消元通常会改变列空间和左零空间， 但是维度不变。</li>
+<li>求一个矩阵的秩：A= $uv^T$ = 列 x 行：C(A) 的基为u， $C(A^T)$=v</li>
+</ul></li>
+</ul>
+
+<p>空间是什么？</p>
+
+<ol>
+<li>由很多（实际上是无穷多个）位置点组成；</li>
+<li>这些点之间存在相对的关系；</li>
+<li>可以在空间中定义长度、角度；</li>
+<li><strong>这个空间可以容纳运动，这里我们所说的运动是从一个点到另一个点的移动（变换），而不是微积分意义上的“连续”性的运动</strong></li>
+<li>每个空间都必须容纳和支持在其中发生的符合规律的运动（变换）。</li>
+</ol>
+
+<p>线性空间是什么？</p>
+
+<ol>
+<li>线性空间中的每一个对象是一个多项式。如果我们以x0, x1, &hellip;, xn为基，那么任何一个这样的多项式都可以表达为一组n+1维向量，其中的每一个分量ai其实就是多项式中x(i-1)项的系数。</li>
+<li>闭区间[a, b]上的n阶连续可微函数的全体，构成一个线性空间。也就是说，这个线性空间的每一个对象是一个连续函数。对于其中任何一个连续函数，根据魏尔斯特拉斯定理，一定可以找到最高次项不大于n的多项式函数，使之与该连续函数的差为0，也就是说，完全相等。这样就把问题归结为L1了。</li>
+</ol>
+
+<p>基是什么？</p>
+
+<ul>
+<li><strong>基是线性空间里的坐标系</strong></li>
+<li>如果一组向量是彼此线性无关的话，那么它们就可以成为度量这个线性空间的一组基，从而事实上成为一个坐标系体系，其中每一个向量都躺在一根坐标轴上，并且成为那根坐标轴上的基本度量单位（长度1）。</li>
+</ul>
+
+<p>行列式</p>
+
+<ul>
+<li>矩阵M的行列式实际上是组成A的各个向量按照平行四边形法则搭成一个n维立方体的体积。</li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-10-%E5%9B%9B%E4%B8%AA%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%90%E7%A9%BA%E9%97%B4/" data-tooltip="线性代数讲座 10: 四个基础的子空间">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-10-%E5%9B%9B%E4%B8%AA%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%90%E7%A9%BA%E9%97%B4/" data-tooltip="线性代数讲座 10: 四个基础的子空间">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%2590%2586%25E8%25A7%25A3%25E7%259F%25A9%25E9%2598%25B5%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%2590%2586%25E8%25A7%25A3%25E7%259F%25A9%25E9%2598%25B5%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%2590%2586%25E8%25A7%25A3%25E7%259F%25A9%25E9%2598%25B5%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+    
+    <h4 id="about-card-name">wisblue</h4>
+    
+      <div id="about-card-bio">我的学习笔记</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        wisblue@gmail.com
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+                <h3 class="media-heading">理解矩阵</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>综合整理对矩阵的理解</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-10-%E5%9B%9B%E4%B8%AA%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%90%E7%A9%BA%E9%97%B4/">
+                <h3 class="media-heading">线性代数讲座 10: 四个基础的子空间</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>四个基本的子空间和$R^n到R^{n \times n}$的扩展</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-11-%E7%9F%A9%E9%98%B5%E7%A9%BA%E9%97%B4/">
+                <h3 class="media-heading">线性代数讲座 11: 矩阵空间</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>新向量空间的基础，秩为1的矩阵，小世界图画</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E8%BD%AC%E8%BD%BD%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5-%E5%AD%9F%E5%B2%A9/">
+                <h3 class="media-heading">转载:《理解矩阵》-孟岩</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"> 理解矩阵（一） 理解矩阵（二） 理解矩阵（三） 《新理解矩阵1》：矩阵是什么？ 《新理解矩阵2》：矩阵是什么？《新理解矩阵3》：行列式的点滴 《新理解矩阵4》：相似矩阵的那些事儿 《新理解矩阵5》：体积=行列式 《新理解矩阵6》：为什么只有方阵有行列式？ 如何理解矩阵的「秩」？ </div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-python-02%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%96%B9%E5%B7%AE%E8%AE%A1%E7%AE%97/">
+                <h3 class="media-heading">机器学习-Python 02：线性回归与方差计算</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>pytho线性回归的示例程序。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/">
+                <h3 class="media-heading">理解最小二乘法</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>摘要：关于如何理解最小二乘法的网上资源。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-9-%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B%E7%A9%BA%E9%97%B4%E5%9F%BA%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%94%9F%E6%88%90/">
+                <h3 class="media-heading">线性代数讲座 9: 线性独立，空间基、线性空间生成</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>如题.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
+                <h3 class="media-heading">How to learn Tensorflow</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Steps to learn TensorFlow, from <a href="https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow">Quora</a></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/">
+                <h3 class="media-heading">Python与go语言语法对比</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>快速学习python的笔记</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-go-01%E7%BD%91%E4%B8%8A%E8%B5%84%E6%BA%90/">
+                <h3 class="media-heading">机器学习-Go 01：网上资源</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>网上搜索到的与机器学习有关的go语言资源。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         28 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://wisblue.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://wisblue.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5\/';
+          
+            this.page.identifier = '\/2019\/01\/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
