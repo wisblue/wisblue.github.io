@@ -306,20 +306,35 @@ $$
 3C + 6D = 5 \\<br />
 6C + 14D = 11
 $$
-同时有：
-$$\Vert e \Vert^2 = e_1^2 + e_2^2 + e_3^2 \\\ =(C+D-1)^2 + (C+2D-2)^2 + (C+3D-2)^2 \\<br />
-$$</p>
+同时根据偏导求极值有：
+$$\Vert e \Vert^2 = e_1^2 + e_2^2 + e_3^2 \\\ =(C+D-1)^2 + (C+2D-2)^2 + (C+3D-2)^2 \\\ =3C^2 + 12CD-10C+14D^2 -22D + 9 \\<br />
+\begin{cases}
+\frac{\delta f}{\delta C} = 6C + 12D - 10 = 0 \\<br />
+\frac{\delta f}{\delta D} = 12C+28D-22 = 0
+\end{cases} \\<br />
+即：
+\begin{cases}
+\frac{\delta f}{\delta C} = 3C + 6D =  5 \\<br />
+\frac{\delta f}{\delta D} =6C+14D= 11
+\end{cases}
+$$
+(多项式运算参考：<a href="https://www.symbolab.com/solver/step-by-step/%5Cleft(C%2BD-1%5Cright)%5E%7B2%7D%2B%5Cleft(C%2B2D-2%5Cright)%5E%7B2%7D%2B%5Cleft(C%2B3D-2%5Cright)%5E%7B2%7D">Symbolab</a>)</p>
 
-<p>于是：
+<p>消元求得，D=<sup>1</sup>&frasl;<sub>2</sub>, C = <sup>2</sup>&frasl;<sub>3</sub>
+所以求得的最佳直线为：y = <sup>2</sup>&frasl;<sub>3</sub> + 1/2t</p>
+
+<p>P1 = <sup>7</sup>&frasl;<sub>6</sub>, P2=<sup>5</sup>&frasl;<sub>3</sub>, P3 = <sup>13</sup>&frasl;<sub>6</sub></p>
+
+<p>$$b =\begin{bmatrix}1 &amp;2 &amp;2 \end{bmatrix}$$
+e = b - p
+于是：
 e1 = -<sup>1</sup>&frasl;<sub>6</sub>, e2 = <sup>2</sup>&frasl;<sub>6</sub>, e3 = -<sup>1</sup>&frasl;<sub>6</sub></p>
 
 <p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-25 22.43.32.jpg" alt="" /></p>
 
 <p>而且有$p \cdot e = 0$</p>
 
-<p>e同时处置与列空间的其他向量，比如说(1 1 1 )、(1, 2, 3)
-对上式分别对C和D偏微分求最小值：可得到同样的结果。
-$$\frac{\delta f}{\delta C}$$</p>
+<h4 id="e同时处置与列空间的其他向量-比如说-1-1-1-1-2-3-垂直-叉积为0">e同时处置与列空间的其他向量，比如说(1 1 1 )、(1, 2, 3)垂直(叉积为0)</h4>
 
 <h4 id="证明-a有独立列时-a-ta-可逆">证明：A有独立列时，$A^TA$可逆</h4>
 
