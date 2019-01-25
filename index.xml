@@ -6,10 +6,37 @@
     <description>Recent content on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第14讲：正交向量和子空间</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/</guid>
+      <description>&lt;p&gt;向量正交和子空间正交&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MIT 线性代数第15讲：向子空间的投影</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC15%E8%AE%B2%E5%90%91%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%8A%95%E5%BD%B1/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC15%E8%AE%B2%E5%90%91%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%8A%95%E5%BD%B1/</guid>
+      <description>&lt;p&gt;Ax=b及最小二乘法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MIT 线性代数第16讲：投影矩阵和最小二乘</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/</guid>
+      <description>&lt;p&gt;线性回归的计算&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>理解矩阵</title>

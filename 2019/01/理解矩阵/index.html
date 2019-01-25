@@ -298,7 +298,7 @@ $</p>
 <li>代数定义：$v \cdot w = \sum_{i=1}^n a_ib_i$ , n = dim S(v)</li>
 <li>$v \cdot w = v^Tw$</li>
 <li>几何定义: $v \cdot w = \vert a \vert \vert b \vert cos\theta$</li>
-<li>一个向量在另一个向量上投影的积</li>
+<li>向量v在另一个向量w上投影长度和w长度的积$v \cdot w = \Vert v \Vert cos \theta \Vert b \vert​$</li>
 <li>如果v是某坐标轴的单位向量，两个向量的点积a⋅ba⋅b就是向量b在此坐标轴上的坐标值。这个结论非常重要，这是傅立叶分析的理论基础。</li>
 <li>从内积数值上我们可以<strong>看出两个向量的在方向上的接近程度</strong>。当内积值为正值时，两个向量大致指向相同的方向（方向夹角小于90度）；当内积值为负值时，两个向量大致指向相反的方向（方向角大于90度）；当内积值为0时，两个向量互相垂直。</li>
 <li>向量内积的解释
@@ -566,7 +566,22 @@ $</p>
 <li>每个空间都必须容纳和支持在其中发生的符合规律的运动（变换）。</li>
 </ol>
 
-<p>线性空间是什么？</p>
+<h1 id="方程是什么">方程是什么？</h1>
+
+<ul>
+<li>ax+by + b = 0: 意味着对x，y拉伸之后，求和在移动b个单位回到原点</li>
+<li><strong>意味着一组向量（x, y|ab+by+b=0)的线性变换之后的投影是一个固定值</strong>，或者高维在低维的映射。</li>
+</ul>
+
+<h1 id="线性是什么">线性是什么？</h1>
+
+<ul>
+<li>线性变换不改变共线性质和距离的比例，就是说原来共线的变换之后还共线，原来等距离的变换之后距离还相等。</li>
+<li>数加代表位置偏移。数乘代表伸缩和方向。</li>
+<li>线性变换效果等价于于与向量（a,b)做点乘，其中a和b是两个基向量被变化到的位置。</li>
+</ul>
+
+<h3 id="线性空间是什么">线性空间是什么？</h3>
 
 <ol>
 <li>线性空间中的每一个对象是一个多项式。如果我们以x0, x1, &hellip;, xn为基，那么任何一个这样的多项式都可以表达为一组n+1维向量，其中的每一个分量ai其实就是多项式中x(i-1)项的系数。</li>
@@ -611,7 +626,7 @@ $</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/" data-tooltip="MIT 线性代数第16讲：投影矩阵和最小二乘">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -693,7 +708,7 @@ $</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/" data-tooltip="MIT 线性代数第16讲：投影矩阵和最小二乘">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -834,6 +849,57 @@ $</p>
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/">
+                <h3 class="media-heading">MIT 线性代数第14讲：正交向量和子空间</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>向量正交和子空间正交</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC15%E8%AE%B2%E5%90%91%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%8A%95%E5%BD%B1/">
+                <h3 class="media-heading">MIT 线性代数第15讲：向子空间的投影</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Ax=b及最小二乘法</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/">
+                <h3 class="media-heading">MIT 线性代数第16讲：投影矩阵和最小二乘</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>线性回归的计算</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
                 <h3 class="media-heading">理解矩阵</h3>
               </a>
@@ -950,57 +1016,6 @@ $</p>
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/how-to-learn-tensorflow/">
-                <h3 class="media-heading">How to learn Tensorflow</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Steps to learn TensorFlow, from <a href="https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow">Quora</a></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/python%E4%B8%8Ego%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94/">
-                <h3 class="media-heading">Python与go语言语法对比</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>快速学习python的笔记</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-go-01%E7%BD%91%E4%B8%8A%E8%B5%84%E6%BA%90/">
-                <h3 class="media-heading">机器学习-Go 01：网上资源</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>网上搜索到的与机器学习有关的go语言资源。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1008,7 +1023,7 @@ $</p>
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         28 posts found
+         31 posts found
       </p>
     </div>
   </div>
