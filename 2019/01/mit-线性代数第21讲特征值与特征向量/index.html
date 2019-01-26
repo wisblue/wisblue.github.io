@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="wisblue">
+<meta name="keywords" content="">
+<meta name="description" content="Eigenvalues and eignevectors
+
+$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A&#43;3I)x = (\lambda &#43; 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 &#43; \lambda_2&#43;...&#43;\lambda_n
+}
+$$">
+
+
+<meta property="og:description" content="Eigenvalues and eignevectors
+
+$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A&#43;3I)x = (\lambda &#43; 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 &#43; \lambda_2&#43;...&#43;\lambda_n
+}
+$$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MIT 线性代数第21讲：特征值与特征向量">
+<meta name="twitter:title" content="MIT 线性代数第21讲：特征值与特征向量">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+<meta property="og:site_name" content="我的学习笔记">
+<meta property="og:description" content="Eigenvalues and eignevectors
+
+$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A&#43;3I)x = (\lambda &#43; 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 &#43; \lambda_2&#43;...&#43;\lambda_n
+}
+$$">
+<meta name="twitter:description" content="Eigenvalues and eignevectors
+
+$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A&#43;3I)x = (\lambda &#43; 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 &#43; \lambda_2&#43;...&#43;\lambda_n
+}
+$$">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-26T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-26T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="数学">
+    
+      <meta property="article:section" content="线性代数">
+    
+  
+  
+    
+      <meta property="article:tag" content="线性代数">
+    
+      <meta property="article:tag" content="数学">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@wisblue">
+
+
+  <meta name="twitter:creator" content="@wisblue">
+
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/%28/img/Screen%20Shot%202019-01-26%2023.00.45.jpg">
+  <meta property="twitter:image" content="https://wisblue.github.io/%28/img/Screen%20Shot%202019-01-26%2023.00.45.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://wisblue.github.io/head.png">
+  <meta property="twitter:image" content="https://wisblue.github.io/head.png">
+
+
+    <title>MIT 线性代数第21讲：特征值与特征向量</title>
+
+    <link rel="icon" href="https://wisblue.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://wisblue.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    <link rel="stylesheet" href="https://wisblue.github.io/css/mathjax-style.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
+  </div>
+  
+    
+      <a class="header-right-icon "
+         href="https://wisblue.github.io/#about">
+    
+    
+      <i class="fa fa-lg fa-/head.png"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://wisblue.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">wisblue</h4>
+        
+          <h5 class="sidebar-profile-bio">我的学习笔记</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wisblue" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      MIT 线性代数第21讲：特征值与特征向量
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-26T00:00:00Z">
+        
+  
+  
+  
+  
+    2019年01月26日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%95%b0%e5%ad%a6">数学</a>, 
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e7%ba%bf%e6%80%a7%e4%bb%a3%e6%95%b0">线性代数</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Eigenvalues and eignevectors</p>
+
+<p><code>$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A+3I)x = (\lambda + 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 + \lambda_2+...+\lambda_n
+}
+$$</code></p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-26 23.00.45.jpg" alt="" /></p>
+
+<h1 id="特征向量-ax-与x平行">特征向量：Ax 与x平行</h1>
+
+<p>$$ Ax = \lambda x$$
+如果A奇异(singular, 会把非零映射到零), $\lambda = 0$为特征值</p>
+
+<ul>
+<li>探讨：什么与平面平行？
+
+<ul>
+<li>对于任何平面上的x， Px = x，$\lambda = 1$</li>
+<li>对于任何$x \bot p$: Px = 0x, $\lambda = 0$</li>
+</ul></li>
+</ul>
+
+<p>特例：</p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-26 23.17.09.jpg" alt="" /></p>
+
+<h2 id="事实-矩阵a特征值的和等于斜交的和">事实：矩阵A特征值的和等于斜交的和。</h2>
+
+<h1 id="怎样找到特征值和特征向量">怎样找到特征值和特征向量？</h1>
+
+<ul>
+<li>怎样接$Ax=\lambda x$
+
+<ul>
+<li>$$(A - \lambda I)x = 0 \\\\ A-\lambda I 必须为奇异矩阵 \\\ det(A-\lambda I)=0 $$</li>
+<li>例子：<code>$$ A = 
+\begin{bmatrix}
+3 &amp; 1 \\\\\\\
+1 &amp; 3 
+\end{bmatrix} \\
+det(A - \lambda I) =
+\begin{vmatrix}
+3 - \lambda &amp; 1 \\\\\\
+1 &amp; 3-\lambda
+\end{vmatrix} = 
+(3 - \lambda)^2 - 1 = \lambda^2 - 6\lambda - 8 = (\lambda-4)(\lambda-2) \\\\\\\
+\lambda_1 = 4, \lambda_2 = 2 \\
+A-4I = 
+\begin{bmatrix}
+-1 &amp; 1 \\
+1 &amp; -1
+\end{bmatrix} \\
+x_1 = 
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix} \\\\
+A-2I = 
+\begin{bmatrix}
+1 &amp; 1 \\
+1 &amp; 1
+\end{bmatrix} \\
+x_2 = 
+\begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}
+$$</code></li>
+</ul></li>
+</ul>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-27 00.02.30.jpg" alt="" /></p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-27 00.07.37.jpg" alt="" /></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC20%E8%AE%B2%E5%85%8B%E8%8E%B1%E5%A7%86cramer%E6%B3%95%E5%88%99%E9%80%86%E7%9F%A9%E9%98%B5%E4%BD%93%E7%A7%AF/" data-tooltip="MIT 线性代数第20讲：克莱姆Cramer法则、逆矩阵，体积">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/" data-tooltip="MIT 线性代数第14讲：正交向量和子空间">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC20%E8%AE%B2%E5%85%8B%E8%8E%B1%E5%A7%86cramer%E6%B3%95%E5%88%99%E9%80%86%E7%9F%A9%E9%98%B5%E4%BD%93%E7%A7%AF/" data-tooltip="MIT 线性代数第20讲：克莱姆Cramer法则、逆矩阵，体积">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/" data-tooltip="MIT 线性代数第14讲：正交向量和子空间">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Fmit-%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E7%25AC%25AC21%25E8%25AE%25B2%25E7%2589%25B9%25E5%25BE%2581%25E5%2580%25BC%25E4%25B8%258E%25E7%2589%25B9%25E5%25BE%2581%25E5%2590%2591%25E9%2587%258F%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Fmit-%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E7%25AC%25AC21%25E8%25AE%25B2%25E7%2589%25B9%25E5%25BE%2581%25E5%2580%25BC%25E4%25B8%258E%25E7%2589%25B9%25E5%25BE%2581%25E5%2590%2591%25E9%2587%258F%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2Fmit-%25E7%25BA%25BF%25E6%2580%25A7%25E4%25BB%25A3%25E6%2595%25B0%25E7%25AC%25AC21%25E8%25AE%25B2%25E7%2589%25B9%25E5%25BE%2581%25E5%2580%25BC%25E4%25B8%258E%25E7%2589%25B9%25E5%25BE%2581%25E5%2590%2591%25E9%2587%258F%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://wisblue.github.io/head.png" alt="作者的图片" />
+    
+    <h4 id="about-card-name">wisblue</h4>
+    
+      <div id="about-card-bio">我的学习笔记</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        wisblue@gmail.com
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC17%E8%AE%B2%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5%E5%92%8Cgram-schmidt%E6%A0%BC%E6%8B%89%E5%A7%86-%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96/">
+                <h3 class="media-heading">MIT 线性代数第17讲：正交矩阵和Gram-Schmidt:格拉姆-施密特正交化</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><strong>Gram</strong>－<strong>Schmidt</strong>正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。</p>
+
+<p><code>$$
+\bbox[yellow,5px]{
+  q_i^T \cdot q_j = 
+    \begin{cases}
+        0 , 当i \ne j\\\\\\
+        1, 当i = j
+    \end{cases}
+  }
+$$
+$$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$</code></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC18%E8%AE%B2%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%B1%9E%E6%80%A7/">
+                <h3 class="media-heading">MIT 线性代数第18讲：行列式的属性</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>行列式 det A</p>
+
+<p>det I=1,det P = 1 或 -1,t, a+a&rsquo;, &hellip;. delt AB = (det A)(det B), $det \;  A^T = det \;  A$</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC19%E8%AE%B2%E8%A1%8C%E5%88%97%E5%BC%8F%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%AD%90%E5%BC%8Fcofactors/">
+                <h3 class="media-heading">MIT 线性代数第19讲：行列式公式和余子式(cofactors)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><code>$$ \bbox[yellow,5px]
+  {
+      del \; A = a_11C11 + a_12C12 + ... + a1nC1n \\\\\\ 
+      C_{ij} = (-1)^{i+j}M_{ij}
+  }
+  $$</code></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC20%E8%AE%B2%E5%85%8B%E8%8E%B1%E5%A7%86cramer%E6%B3%95%E5%88%99%E9%80%86%E7%9F%A9%E9%98%B5%E4%BD%93%E7%A7%AF/">
+                <h3 class="media-heading">MIT 线性代数第20讲：克莱姆Cramer法则、逆矩阵，体积</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><code>$$ \bbox[yellow,5px]
+  {
+      A^{-1} = \frac{1}{det\;A}C^T
+  }\;\;\;
+\bbox[yellow,5px]
+  {
+     X_j = \frac{det B_j}{det A}, B_j 为矩阵第j列被b取代。
+  }
+\\\\\\
+\bbox[yellow,5px]
+  {
+  (u \times v) \cdot w = 
+\begin{vmatrix}
+u_1 &amp; u_2 &amp; u_3 \\
+v_1 &amp; v_2 &amp; v_3 \\
+w_1 &amp; w_2 &amp; w_3
+\end{vmatrix} = 平行六面体积
+}
+$$</code></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/">
+                <h3 class="media-heading">MIT 线性代数第21讲：特征值与特征向量</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Eigenvalues and eignevectors</p>
+
+<p><code>$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A+3I)x = (\lambda + 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 + \lambda_2+...+\lambda_n
+}
+$$</code></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/">
+                <h3 class="media-heading">MIT 线性代数第14讲：正交向量和子空间</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>向量正交和子空间正交</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC15%E8%AE%B2%E5%90%91%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E6%8A%95%E5%BD%B1/">
+                <h3 class="media-heading">MIT 线性代数第15讲：向子空间的投影</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Ax=b及最小二乘法</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/">
+                <h3 class="media-heading">MIT 线性代数第16讲：投影矩阵和最小二乘</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>线性回归的计算</p>
+
+<p>$P = A(A^TA)^{-1}A^T$</p>
+
+<p><code>$$A^TAx = A^Tb​$$</code></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5/">
+                <h3 class="media-heading">理解矩阵</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>综合整理对矩阵的理解</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%AE%B2%E5%BA%A7-10-%E5%9B%9B%E4%B8%AA%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%90%E7%A9%BA%E9%97%B4/">
+                <h3 class="media-heading">线性代数讲座 10: 四个基础的子空间</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>四个基本的子空间和$R^n到R^{n \times n}$的扩展</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         36 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://wisblue.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://wisblue.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F\/';
+          
+            this.page.identifier = '\/2019\/01\/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

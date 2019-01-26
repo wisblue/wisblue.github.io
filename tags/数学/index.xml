@@ -84,6 +84,24 @@ $$&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>MIT 线性代数第21讲：特征值与特征向量</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</link>
+      <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC21%E8%AE%B2%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/</guid>
+      <description>&lt;p&gt;Eigenvalues and eignevectors&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+如果 Ax = \lambda x \\
+则有(A+3I)x = (\lambda + 3)x \\\\
+det[A-\lambda I] = 0 \\
+矩阵的迹 \; trace = \lambda_1 + \lambda_2+...+\lambda_n
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>MIT 线性代数第14讲：正交向量和子空间</title>
       <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC14%E8%AE%B2%E6%AD%A3%E4%BA%A4%E5%90%91%E9%87%8F%E5%92%8C%E5%AD%90%E7%A9%BA%E9%97%B4/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
