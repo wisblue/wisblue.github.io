@@ -246,6 +246,17 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p><strong>Gram</strong>－<strong>Schmidt</strong>正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。</p>
+
+<p><code>$$
+\bbox[yellow,5px]{
+  q_i^T \cdot q_j = 
+    \begin{cases}
+        0 , 当i \ne j\\\\\\
+        1, 当i = j
+    \end{cases}
+  }
+$$
+$$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$</code></p>
       
       <p>
         <a href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC17%E8%AE%B2%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5%E5%92%8Cgram-schmidt%E6%A0%BC%E6%8B%89%E5%A7%86-%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96/" class="postShorten-excerpt_link link">阅读全文</a>
@@ -312,9 +323,7 @@
       
         <p>行列式 det A</p>
 
-<p>属性1， 2， 3， 4-10</p>
-
-<p>$\pm$符号</p>
+<p>det I=1,det P = 1 或 -1,t, a+a&rsquo;, &hellip;. delt AB = (det A)(det B), $det \;  A^T = det \;  A$</p>
       
       <p>
         <a href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC18%E8%AE%B2%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%B1%9E%E6%80%A7/" class="postShorten-excerpt_link link">阅读全文</a>
@@ -451,17 +460,14 @@
       
         <p><code>$$ \bbox[yellow,5px]
   {
-​      A^{-1} = \frac{1}{det\;A}C^T
-  }
-  $$</code></p>
-
-<p><code>$$ \bbox[yellow,5px]
+      A^{-1} = \frac{1}{det\;A}C^T
+  }\;\;\;
+\bbox[yellow,5px]
   {
-​      X_j = \frac{det B_j}{det A}, B_j 为矩阵第j列被b取代。
+     X_j = \frac{det B_j}{det A}, B_j 为矩阵第j列被b取代。
   }
-  $$</code></p>
-
-<p><code>$$ \bbox[yellow,5px]
+\\\\\\
+\bbox[yellow,5px]
   {
   (u \times v) \cdot w = 
 \begin{vmatrix}
@@ -666,6 +672,10 @@ $$</code></p>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>线性回归的计算</p>
+
+<p>$P = A(A^TA)^{-1}A^T$</p>
+
+<p><code>$$A^TAx = A^Tb​$$</code></p>
       
       <p>
         <a href="https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC16%E8%AE%B2%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/" class="postShorten-excerpt_link link">阅读全文</a>
@@ -767,7 +777,18 @@ $$</code></p>
                   Jan 1, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p><strong>Gram</strong>－<strong>Schmidt</strong>正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。</p></div>
+              <div class="media-content hide-xs font-merryweather"><p><strong>Gram</strong>－<strong>Schmidt</strong>正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。</p>
+
+<p><code>$$
+\bbox[yellow,5px]{
+  q_i^T \cdot q_j = 
+    \begin{cases}
+        0 , 当i \ne j\\\\\\
+        1, 当i = j
+    \end{cases}
+  }
+$$
+$$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$</code></p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -786,9 +807,7 @@ $$</code></p>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>行列式 det A</p>
 
-<p>属性1， 2， 3， 4-10</p>
-
-<p>$\pm$符号</p></div>
+<p>det I=1,det P = 1 或 -1,t, a+a&rsquo;, &hellip;. delt AB = (det A)(det B), $det \;  A^T = det \;  A$</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -829,17 +848,14 @@ $$</code></p>
               </span>
               <div class="media-content hide-xs font-merryweather"><p><code>$$ \bbox[yellow,5px]
   {
-​      A^{-1} = \frac{1}{det\;A}C^T
-  }
-  $$</code></p>
-
-<p><code>$$ \bbox[yellow,5px]
+      A^{-1} = \frac{1}{det\;A}C^T
+  }\;\;\;
+\bbox[yellow,5px]
   {
-​      X_j = \frac{det B_j}{det A}, B_j 为矩阵第j列被b取代。
+     X_j = \frac{det B_j}{det A}, B_j 为矩阵第j列被b取代。
   }
-  $$</code></p>
-
-<p><code>$$ \bbox[yellow,5px]
+\\\\\\
+\bbox[yellow,5px]
   {
   (u \times v) \cdot w = 
 \begin{vmatrix}
@@ -899,7 +915,11 @@ $$</code></p></div>
                   Jan 1, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>线性回归的计算</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>线性回归的计算</p>
+
+<p>$P = A(A^TA)^{-1}A^T$</p>
+
+<p><code>$$A^TAx = A^Tb​$$</code></p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
