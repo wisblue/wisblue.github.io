@@ -6,10 +6,25 @@
     <description>Recent content in 线性代数 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第22讲：对角化和A的乘方</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC22%E8%AE%B2%E5%AF%B9%E8%A7%92%E5%8C%96%E5%92%8Ca%E7%9A%84%E4%B9%98%E6%96%B9/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC22%E8%AE%B2%E5%AF%B9%E8%A7%92%E5%8C%96%E5%92%8Ca%E7%9A%84%E4%B9%98%E6%96%B9/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+S^{-1}AS = \Lambda \\
+A = S\Lambda S^{-1} \\
+A^K = S \Lambda^K S^{-1}
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MIT 线性代数第17讲：正交矩阵和Gram-Schmidt:格拉姆-施密特正交化</title>
