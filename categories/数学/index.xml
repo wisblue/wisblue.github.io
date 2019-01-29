@@ -6,10 +6,28 @@
     <description>Recent content in 数学 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第24讲：马尔科夫矩阵；傅里叶序列</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC24%E8%AE%B2%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E7%9F%A9%E9%98%B5%E5%82%85%E9%87%8C%E5%8F%B6%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC24%E8%AE%B2%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E7%9F%A9%E9%98%B5%E5%82%85%E9%87%8C%E5%8F%B6%E5%BA%8F%E5%88%97/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+马尔科夫矩阵特征： \\\\\\
+1. \lambda = 1为特征值 \\\\\\
+2. 所有其他的\vert \lambda_i \vert\ \lt 1 \\\\\\
+傅里叶序列：\\\\\\
+f(x) = a_0 + a_1cosx + b_1sinx + a_2cos2x + b_2sin2x+... \\\\\\
+其中：a_1 = \frac{1}{\pi} \int_0^{2 \pi} f(x)cosx \; dx
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MIT 线性代数第23讲：微分方程和乘方$e^{At}$</title>
