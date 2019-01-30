@@ -6,10 +6,23 @@
     <description>Recent content in 数学 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第26讲：复数矩阵；快速傅里叶变换</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC26%E8%AE%B2%E5%A4%8D%E6%95%B0%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC26%E8%AE%B2%E5%A4%8D%E6%95%B0%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</guid>
+      <description>&lt;p&gt;$$ \bbox[yellow,5px]
+{
+x = 1
+}
+$$&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MIT 线性代数第24讲：马尔科夫矩阵；傅里叶序列</title>
