@@ -26,6 +26,23 @@ $$&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>MIT 线性代数第27讲：正定矩阵和最小值</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC27%E8%AE%B2%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E5%80%BC/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC27%E8%AE%B2%E6%AD%A3%E5%AE%9A%E7%9F%A9%E9%98%B5%E5%92%8C%E6%9C%80%E5%B0%8F%E5%80%BC/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+满足一下任意一条, 即为正定矩阵：\\\\\\
+1. \lambda_1 \gt 0, \lambda_2 \gt 0 - 特征值测试\\\\\\
+2. a \gt 0, ac-b^2 &amp;gt;0  - 行列式测试 \\\\\\
+3. 主元 a &amp;gt; 0, $\frac{ac - b^2}{a} \gt 0 - 主元测试 \\\\\\
+4. x^TAx \gt 0
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>MIT 线性代数第24讲：马尔科夫矩阵；傅里叶序列</title>
       <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC24%E8%AE%B2%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E7%9F%A9%E9%98%B5%E5%82%85%E9%87%8C%E5%8F%B6%E5%BA%8F%E5%88%97/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
