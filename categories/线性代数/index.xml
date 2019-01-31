@@ -6,10 +6,24 @@
     <description>Recent content in 线性代数 on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第28讲：相似矩阵与乔丹型</title>
+      <link>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC28%E8%AE%B2%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%B9%94%E4%B8%B9%E5%9E%8B/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC28%E8%AE%B2%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%B8%8E%E4%B9%94%E4%B8%B9%E5%9E%8B/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+相似矩阵：B=M^{-1}AM \\\\\\
+}
+$$&lt;/code&gt;
+乔丹型Jordan Form：可表达所有方阵，包括不能对角化的方阵&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MIT 线性代数第26讲：复数矩阵；快速傅里叶变换</title>
@@ -189,7 +203,8 @@ $$&lt;/code&gt;&lt;/p&gt;</description>
 如果 Ax = \lambda x \\
 则有(A+3I)x = (\lambda + 3)x \\\\
 det[A-\lambda I] = 0 \\
-矩阵的迹 \; trace = \lambda_1 + \lambda_2+...+\lambda_n
+矩阵的迹 \; trace = \lambda_1 + \lambda_2+...+\lambda_n \\\\\\
+矩阵的行列式：det A = \lambda_1 \lambda_2...\lambda_n
 }
 $$&lt;/code&gt;&lt;/p&gt;</description>
     </item>
