@@ -6,10 +6,24 @@
     <description>Recent content on 我的学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 31 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wisblue.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MIT 线性代数第30讲：线性变换和变换矩阵</title>
+      <link>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC30%E8%AE%B2%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E5%92%8C%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC30%E8%AE%B2%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E5%92%8C%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+线性变换需满足等比缩放和数值相加这两个条件。\\\\\\
+可以根据变换前后的对应关系，找到变换矩阵T。
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MIT 线性代数第28讲：相似矩阵与乔丹型</title>
