@@ -19,8 +19,33 @@
       <guid>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC31%E8%AE%B2%E5%8F%98%E6%9B%B4%E5%9F%BA%E4%B8%8E%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/</guid>
       <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
 {
-线性变换需满足等比缩放和数值相加这两个条件。\\\\\\
-可以根据变换前后的对应关系，找到变换矩阵T。
+通过假定相互正交的向量构成正交矩阵，代替计算特征值，减少了计算量，获得了与原始矩阵接近的表达。
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MIT 线性代数第33讲：左逆矩阵、右逆矩阵及伪逆矩阵</title>
+      <link>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC33%E8%AE%B2%E5%B7%A6%E9%80%86%E7%9F%A9%E9%98%B5%E5%8F%B3%E9%80%86%E7%9F%A9%E9%98%B5%E5%8F%8A%E4%BC%AA%E9%80%86%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC33%E8%AE%B2%E5%B7%A6%E9%80%86%E7%9F%A9%E9%98%B5%E5%8F%B3%E9%80%86%E7%9F%A9%E9%98%B5%E5%8F%8A%E4%BC%AA%E9%80%86%E7%9F%A9%E9%98%B5/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+即使不可逆矩阵，它的rank部分也是可逆的。于是导出伪逆矩阵。
+}
+$$&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MIT 线性代数第34讲：最后一课 复习</title>
+      <link>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC34%E8%AE%B2%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE-%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/02/mit-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AC%AC34%E8%AE%B2%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE-%E5%A4%8D%E4%B9%A0/</guid>
+      <description>&lt;p&gt;&lt;code&gt;$$ \bbox[yellow,5px]
+{
+试题讲解
 }
 $$&lt;/code&gt;&lt;/p&gt;</description>
     </item>
