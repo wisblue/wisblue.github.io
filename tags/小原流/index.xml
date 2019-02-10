@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小原流 on 我的学习笔记</title>
+    <link>https://wisblue.github.io/tags/%E5%B0%8F%E5%8E%9F%E6%B5%81/</link>
+    <description>Recent content in 小原流 on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 09 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/tags/%E5%B0%8F%E5%8E%9F%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>小原流图示</title>
+      <link>https://wisblue.github.io/2019/02/%E5%B0%8F%E5%8E%9F%E6%B5%81%E5%9B%BE%E7%A4%BA/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/02/%E5%B0%8F%E5%8E%9F%E6%B5%81%E5%9B%BE%E7%A4%BA/</guid>
+      <description>&lt;p&gt;小原流的平纵面布局&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
