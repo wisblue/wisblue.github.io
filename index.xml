@@ -525,7 +525,11 @@ $$&lt;/code&gt;&lt;/p&gt;</description>
       <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wisblue.github.io/2019/01/linear-algebra-lecture-7-solving-ax-0-pivot-variables-special-solutions/</guid>
-      <description>&lt;p&gt;Ax=b and null space.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ax=b and null space.&lt;/p&gt;
+
+&lt;p&gt;本讲继续上一讲，通过消元法，进一步阐述零空间的求解。A的特解为&lt;/p&gt;
+
+&lt;p&gt;$$N=x = c \begin{bmatrix} -F \\\ I \end{bmatrix}$$&lt;/p&gt;</description>
     </item>
     
     <item>

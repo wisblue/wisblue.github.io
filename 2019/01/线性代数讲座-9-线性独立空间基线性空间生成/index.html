@@ -266,6 +266,26 @@
 
 <p>​   向量互相独立，则他们构成的矩阵的零空间是零向量。</p>
 
+<p>​   例子1：</p>
+
+<p>​       两个向量，v1, v2=2v1, 有-2v1+v2=0, 结论：线性不独立。</p>
+
+<p>​   例子2：</p>
+
+<p>​       v2=0, v1$\ne$0, 0v1+1v2 =0, 线性不独立：<strong>如果含有0向量，则此组向量不独立</strong></p>
+
+<p>​   例子3：</p>
+
+<p>​       v1, v2, v3 $\ne$ 0.  如果m&lt;n（行数少于列数），对于下述矩阵，存在零空间，给出v1, v2, v3的线性组合为0.</p>
+
+<p>结论：</p>
+
+<p>**如果向量独立，则C(A)={0}、rank=n, 没有自由变量. **</p>
+
+<p><strong>如果不独立则Ac=0，则在零空间内存在不为{0}的c、rank&lt;n，存在自由变量</strong></p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-02-14 11.13.56.jpg" alt="" /></p>
+
 <p><strong>线性非独立</strong>， 则存在C，C非零，而且Ac=0成立。</p>
 
 <p>pivot column：枢轴列</p>
@@ -274,9 +294,45 @@
 
 <p>rank of A: A的秩=枢轴列的个数=列空间的维度（subspace)</p>
 
-<p><strong>basis： 基</strong> ：组合线性<strong>独立</strong>向量并<strong>生成</strong>线性空间</p>
+<p>一个有实际意义的问题是找出一组向量，能长成一个所需要的空间， 但是这里头不存在没用的自由向量。引出基的概念</p>
+
+<p><strong>basis： 基</strong> ：1 组合线性<strong>独立</strong>向量 2 并<strong>生成</strong>线性空间</p>
+
+<p>例子：$R^3$的一个基, 如下图， 根据定义验证</p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-02-14 11.34.24.jpg" alt="" /></p>
+
+<p>例子2：下例线性独立， 但是不能长成$R^3$,那么添加一个什么样的向量会张成$R^3$?</p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-02-14 11.36.14.jpg" alt="" /></p>
+
+<p><strong>总结：n个向量成为基的条件是所构成的nxn矩阵可逆。</strong></p>
+
+<p>但上面的例子可以构成三维中2维平面的基。</p>
+
+<p>由上面的例子引出：</p>
+
+<p><strong>所有构成空间的基的向量的个数，都和此空间的维数相等。</strong></p>
+
+<p>下例：张成空间吗？是的。 是空间的基吗？不是。</p>
+
+<p>它的基是啥？第1，2列。rank=2。</p>
+
+<p><strong>结论：rank=主元个数=列空间C(A)维数</strong></p>
+
+<p>1，3也可以构成基。</p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-02-14 11.48.55.jpg" alt="" /></p>
 
 <p><strong>null space: 零空间的维数=自由变量的个数=空间的维数-矩阵的秩</strong></p>
+
+<p>上面的例子，又可以给出另外一个0空间的向量。</p>
+
+<p>问题：他们是空间的基吗？他们独立吗？引出零空间的维度。</p>
+
+<p><strong>结论：零空间的维度是自由变量的个数。dim N(A)=自由变量的个数=n-rank</strong></p>
+
+<p><img src="https://wisblue.github.io/img/Screen Shot 2019-02-14 11.54.51.jpg" alt="" /></p>
 
 <p>invertable： 不可逆。 说明rank(A) &lt; n</p>
 
