@@ -294,6 +294,15 @@ $$A^TAx = A^Tb​$$">
 
 <p>e = b - p = b - Pb = (I-P)b</p>
 
+<p>(因为b = e + Pb, 所以e= b-Pb = (I-P)b)
+$$
+e = b - p \\<br />
+e垂直于a \\<br />
+A^T(b-p) = 0 \\<br />
+A^Tp = A^Tb \\<br />
+A^TA \hat x = A^T b
+$$</p>
+
 <h3 id="例题">例题</h3>
 
 <p>线性拟合的问题是最小化 $\Vert e \Vert^2 = \Vert Ax - b \Vert^2 = e_1^2 + e_2^2 + e_3^2$</p>
@@ -352,21 +361,21 @@ e1 = -<sup>1</sup>&frasl;<sub>6</sub>, e2 = <sup>2</sup>&frasl;<sub>6</sub>, e3 
 
 <p><img src="https://wisblue.github.io/img/Screen Shot 2019-01-25 22.43.32.jpg" alt="" /></p>
 
-<p>而且有$p \cdot e = 0$</p>
+<p><strong>而且有$p \cdot e = 0$ (验证一下)</strong></p>
 
-<h4 id="e同时处置与列空间的其他向量-比如说-1-1-1-1-2-3-垂直-叉积为0">e同时处置与列空间的其他向量，比如说(1 1 1 )、(1, 2, 3)垂直(叉积为0)</h4>
+<h4 id="e同时垂直于列空间的其他向量-比如说-1-1-1-1-2-3-垂直-叉积为0">e同时垂直于列空间的其他向量，比如说(1 1 1 )、(1, 2, 3)垂直(叉积为0)</h4>
 
-<h4 id="证明-a有独立列时-a-ta-可逆">证明：A有独立列时，$A^TA$可逆</h4>
+<h4 id="证明-a的列独立时-a-ta-可逆">证明：A的列独立时，$A^TA$可逆</h4>
 
-<p>假设$A^TAx = 0$, 那么x=0</p>
+<p>假设$A^TAx = 0$, 那么x=0 （当A可逆，A的零空间只有{0})</p>
 
-<p>$x^TA^TAx = 0$</p>
+<p>$x^TA^TAx = 0 =&gt; (Ax)^T (Ax) = 0 =&gt; (Ax)^2 = 0 =&gt; Ax = 0$</p>
 
-<p>$ x^TA = (Ax)^2$,</p>
+<p>$ x^TA = (Ax)^2​$,</p>
 
 <p>于是有$(Ax)^T(Ax)=0 =&gt; (Ax)^2 = 0 =&gt; Ax = 0$</p>
 
-<p>A有独立列，且Ax= 0， 那么x = 0</p>
+<p>A有独立列时，且Ax= 0， 那么x = 0</p>
 
 <h4 id="如果列是垂直的单位向量-perpendicular-unit-vector-那么他们一定是独立的">如果列是垂直的单位向量（perpendicular unit vector)，那么他们一定是独立的。</h4>
 

@@ -270,16 +270,38 @@
 
 <p>$xa^Ta = a^Tb$</p>
 
-<h4 id="得到-x-frac-a-t-b-a-t-a-p-ax-p-a-frac-a-t-b-a-t-a">得到： $x = \frac {a^T b} {a^T a}, P = ax =&gt; P = a \frac {a^T b} {a^T a} $</h4>
+<h4 id="得到-x-frac-a-t-b-a-t-a-p-ax-p-a-frac-a-t-b-a-t-a">得到： $x = \frac {a^T b} {a^T a}, p = ax =&gt; p = a \frac {a^T b} {a^T a} $</h4>
 
-<h4 id="p-a-a-t-a-t-a">$P =({a a^T}/ {a^T a})$</h4>
+<h4 id="p-a-a-t-a-t-a-b-p为投影-或写-p-pb-p为投影矩阵-p-frac-a-a-t-a-t-a">$p =({a a^T}/ {a^T a}) b \; p为投影\\\ 或写\;p = Pb \; P为投影矩阵\\\ P = \frac {a a^T} {a^T a}  $</h4>
 
-<ul>
-<li>C(P):P是通过a的直线、</li>
-<li>rank P = 1</li>
+<h3 id="解读">解读：</h3>
+
+<ol>
+<li>假设b’=2b, 长度增加2倍，投影会怎么变化？A：p增加2倍</li>
+<li>假设a&rsquo;=2a, 长度增加2倍，投影会怎么变化? A: p 不变化。</li>
+<li>我们发现，<strong>投影是矩阵对向量a的变换</strong>。或表示为 投影=[投影矩阵][向量b]</li>
+</ol>
+
+<h3 id="发问">发问：</h3>
+
+<ol>
+<li>P的列空间是什么？
+
+<ol>
+<li>C(P)是穿过a的直线</li>
+<li>rank (P) = 1</li>
+</ol></li>
+<li>对称吗？
+
+<ol>
 <li>$P^T = P$, 对称</li>
+</ol></li>
+<li>对p进行第二次投影会发生什么？
+
+<ol>
 <li>第二次投影，p点不动，则有$P^2$=P</li>
-</ul>
+</ol></li>
+</ol>
 
 <h2 id="引申到多维">引申到多维</h2>
 
@@ -287,7 +309,7 @@
 <li>为什么投影：
 
 <ul>
-<li>Ax=b也许没有解， 方程数比未知数多。</li>
+<li>Ax=b也许没有解， 方程数比未知数多。因此把问题转化成b在a上的投影问题。</li>
 <li>因此解$A \hat x=p$， p是b在列空间上的投影。</li>
 </ul></li>
 </ul>
@@ -308,13 +330,13 @@
 
 <p>写成矩阵形式</p>
 
-<p>$$\begin{bmatrix} a_1^T \\\ a_2^T \end{bmatrix} (b - A \hat x) = \begin{bmatrix} 0 \\\ 0 \end{bmatrix}$$</p>
+<p>$$\begin{bmatrix} a_1^T \\\ a_2^T \end{bmatrix} (b - A \hat x) = \begin{bmatrix} 0 \\\ 0 \end{bmatrix} $$</p>
 
 <p>或写成：</p>
 
 <p>$A^T(b-A \hat x) = 0$</p>
 
-<h4 id="可知e位于-a-t-的零空间-则有-e-bot-c-a">可知e位于$A^T$的零空间，则有$e \bot C(A)$</h4>
+<h4 id="可知e位于-a-t-的零空间-且有-e-bot-c-a">可知e位于$A^T$的零空间，且有$e \bot C(A)$</h4>
 
 <h1 id="得到-a-ta-hat-x-a-t-b">得到 $A^TA \hat x = A^T b $</h1>
 
@@ -326,8 +348,50 @@
 
 <p>$$\bbox
  [5px,border:2px solid red]
-{P = A \hat x = A(A^TA)^{-1}A^T}
+{P = A \hat x = A(A^TA)^{-1}A^T}$$</p>
+
+<h3 id="解读-1">解读：</h3>
+
+<p>如果进一步演算</p>
+
+<p>$$
+P = A(A^{T}A)^{-1}A^T = A A^{-1} (A^T)^{-1} A^T = I
 $$</p>
+
+<p>我们得到了单位矩阵，问题出在哪？</p>
+
+<p>A：</p>
+
+<ol>
+<li>A不是方阵，因此没有逆矩阵，所以不能进一步拆解</li>
+<li>如果A是方阵且可逆，那么他的列空间是整个$R^n$。 如果我投影到$R^n$的投影矩阵矩阵是什么？是单位矩阵（因为这个投影什么都不需要做，对原来的向量不需要做任何改变。如果将b投影到$R^3$, b本身位于列空间，所以这个投影是单位矩阵。）</li>
+<li>回忆1维的例子，$P = \frac {a a^T} {a^T a}  $. 有点像</li>
+<li>我们和别的投影矩阵一样，我们对这个投影矩阵有什么样的期待？
+
+<ol>
+<li>对称， $P^T = T$</li>
+<li>$P^2 = P$?
+证明：
+$$
+P^2 = A(A^T A)^{-1} A^T A(A^T A)^{-1} A^T \\\ =  A(A^T A)^{-1}\;(A^T A(A^T A)^{-1}) A^T \\\= A(A^T A)^{-1} A^T
+$$</li>
+</ol></li>
+</ol>
+
+<h3 id="总结">总结：</h3>
+
+<ol>
+<li><p>如果b位于列空间， Pb=b， （想像桌面上的铅笔的投影没有变化）
+$$
+P = A(A^T A)^{-1} A^T \\<br />
+b = Ax \\<br />
+Pb = A(A^T A)^{-1} A^T Ax \\\= A((A^T A)^{-1} A^T A)x \\\ = Ax \\\= b
+$$</p></li>
+
+<li><p>如果b垂直于列空间，Pb=0， （想象铅笔垂直于桌面）</p></li>
+
+<li><p>什么向量垂直于列空间？答案是$N(A^T)$的向量, $A^T$的零空间的向量。</p></li>
+</ol>
 
 <h1 id="例题">例题：</h1>
 
