@@ -320,7 +320,7 @@ $$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$</code></p>
 <h1 id="orthonormal-规划正交向量">Orthonormal - 规划正交向量</h1>
 
 <ul>
-<li><p>定义
+<li>定义
 $$
 \bbox[yellow,5px]{
 q_i^T \cdot q_j =
@@ -329,9 +329,8 @@ q_i^T \cdot q_j =
     1, 当i = j
 \end{cases}
 }
-$$</p></li>
-
-<li><p>依据上述定义， 把q向量作为矩阵的列$$Q^TQ=\begin {bmatrix} q_1^T \\\ &hellip; \\\ q_n^T \end{bmatrix}$$</p></li>
+$$</li>
+<li>依据上述定义， 把q向量作为矩阵的列$$Q^TQ=\begin {bmatrix} q_1^T \\\ &hellip; \\\ q_n^T \end{bmatrix}$$</li>
 </ul>
 
 <p>于是$$Q^TQ=\begin {bmatrix} q_1^T \\\ &hellip; \\\ q_n^T \end{bmatrix}\begin {bmatrix} q_1 &amp; &hellip; &amp; q_n \end{bmatrix}=\begin {bmatrix} 1 &amp; 0 &amp; 0 \\\ 0 &amp; 1 &amp; 0 \\\ 0 &amp; 0 &amp; 1 \end{bmatrix} = I$$</p>
@@ -391,11 +390,12 @@ A^TB = A^T(b- \frac {A^Tb}{A^TA}A) = A^Tb - A^T \frac {A^Tb}{A^TA}A = A^Tb-A^Tb 
 $$
 现在找到C垂直于A和B, 也就是C减去A方向的分量和B方向的分量:
 $$
-C = c - \frac{A^Tc}{A^TA}A - \frac {B^Tc}{B^TB}B</p>
+C = c - \frac{A^Tc}{A^TA}A - \frac {B^Tc}{B^TB}B
+$$</p>
 
-<p>例题：格拉姆-施密特方法计算单位正交矩阵</p>
-
-<p>a = \begin{bmatrix}
+<p>例题：格拉姆-施密特方法计算单位正交矩阵
+$$
+a = \begin{bmatrix}
 1 \\<br />
 1 \\<br />
 1
